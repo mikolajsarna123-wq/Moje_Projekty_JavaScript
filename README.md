@@ -1,46 +1,50 @@
-# Moje Projekty JavaScript (Vanilla JS)
+# 🚀 Moje Projekty JavaScript (Vanilla JS)
 
-1. [**Projekt 01: Click Add Font Resize**](https://mikolajsarna123-wq.github.io/Moje_Projekty_JavaScript/Projekt_01%20-click-add-font-resize/)  
+Poniżej znajduje się lista moich projektów. Kliknij w nazwę projektu, aby zobaczyć jego **działanie na żywo (Live Demo)**.
+
+---
+
+1. [**Projekt 01: Click Add Font Resize**](https://mikolajsarna123-wq.github.io/Moje_Projekty_JavaScript/Projekt_01%20-click-add-font-resize/)
    Dodawanie elementu po kliknięciu i zmiana FontSize dla liczb podzielnych przez 3.
 
-2. [**Projekt 02: Scroll Square Size**](https://mikolajsarna123-wq.github.io/Moje_Projekty_JavaScript/Projekt_02-scroll-square-size/)  
+2. [**Projekt 02: Scroll Square Size**](https://mikolajsarna123-wq.github.io/Moje_Projekty_JavaScript/Projekt_02-scroll-square-size/)
    Kwadrat zmieniający rozmiar podczas skrolowania strony.
 
-3. [**Projekt 03: Scroll Bar Style**](https://mikolajsarna123-wq.github.io/Moje_Projekty_JavaScript/Projekt_03-scroll-bar-style/)  
+3. [**Projekt 03: Scroll Bar Style**](https://mikolajsarna123-wq.github.io/Moje_Projekty_JavaScript/Projekt_03-scroll-bar-style/)
    Pasek zmieniający grubość i kolor po scrolowaniu.
 
-4. [**Projekt 04: Click Show Enlarge**](https://mikolajsarna123-wq.github.io/Moje_Projekty_JavaScript/Projekt_04-click-show-enlarge/)  
+4. [**Projekt 04: Click Show Enlarge**](https://mikolajsarna123-wq.github.io/Moje_Projekty_JavaScript/Projekt_04-click-show-enlarge-/)
    Pojawienie się elementu i jego powiększenie po kliknięciu.
 
-5. [**Projekt 05: Dynamic List Creator**](https://mikolajsarna123-wq.github.io/Moje_Projekty_JavaScript/Projekt_05-dynamic-list-creator/)  
+5. [**Projekt 05: Dynamic List Creator**](https://mikolajsarna123-wq.github.io/Moje_Projekty_JavaScript/Projekt_05-dynamic-list-creator-/)
    Tworzenie listy i dodawanie kolejnych elementów przez kliknięcie.
 
-6. [**Projekt 06: Mouse Position Tracker**](https://mikolajsarna123-wq.github.io/Moje_Projekty_JavaScript/Projekt_06-mouse-position-tracker/)  
+6. [**Projekt 06: Mouse Position Tracker**](https://mikolajsarna123-wq.github.io/Moje_Projekty_JavaScript/Projekt_06-mouse-position-tracker-/)
    Wykrycie i wyświetlenie aktualnej pozycji myszki.
 
-7. [**Projekt 07: Click BG Color Pos**](https://mikolajsarna123-wq.github.io/Moje_Projekty_JavaScript/Projekt_07-click-bg-color-pos/)  
-   Zmiana koloru tła przy kliknięciu zależnie od pozycji (parzyste/nieparzyste współrzędne).
+7. [**Projekt 07: Click BG Color Pos**](https://mikolajsarna123-wq.github.io/Moje_Projekty_JavaScript/Projekt_07-click-bg-color-pos/)
+   Zmiana koloru tła przy kliknięciu zależnie od pozycji.
 
-8. [**Projekt 08: Drag Drop Color**](https://mikolajsarna123-wq.github.io/Moje_Projekty_JavaScript/Projekt_08-drag-drop-color/)  
+8. [**Projekt 08: Drag Drop Color**](https://mikolajsarna123-wq.github.io/Moje_Projekty_JavaScript/Projekt_08-drag-drop-color/)
    Łapanie i upuszczanie kwadratu wraz ze zmianą jego koloru.
 
-9. [**Projekt 09: Keyboard Brightness**](https://mikolajsarna123-wq.github.io/Moje_Projekty_JavaScript/Projekt_09-keyboard-brightness/)  
+9. [**Projekt 09: Keyboard Brightness**](https://mikolajsarna123-wq.github.io/Moje_Projekty_JavaScript/Projekt_09-keyboard-brightness-/)
    Rozjaśnianie i przyciemnianie tła za pomocą klawiszy klawiatury.
 
-10. [**Projekt 10: Case Insensitive Pass**](https://mikolajsarna123-wq.github.io/Moje_Projekty_JavaScript/Projekt_10-case-insensitive-pass/)  
-    Podaj hasło, aby odkryć wiadomość. Hasło znika po wpisaniu, wielkość liter nie ma znaczenia.
+10. [**Projekt 10: Case Insensitive Pass**](https://mikolajsarna123-wq.github.io/Moje_Projekty_JavaScript/Projekt_10-case-insensitive-pass-/)
+    Podaj hasło, aby odkryć wiadomość.
 
-11. [**Projekt 11: Baby Name Generator**](https://mikolajsarna123-wq.github.io/Moje_Projekty_JavaScript/Projekt_11-baby-name-generator/)  
+11. [**Projekt 11: Baby Name Generator**](https://mikolajsarna123-wq.github.io/Moje_Projekty_JavaScript/Projekt_11-baby-name-generator-/)
     Losowanie imienia dla dziecka.
 
-12. [**Projekt 12: Bulk Code Generator**](https://mikolajsarna123-wq.github.io/Moje_Projekty_JavaScript/Projekt_12-bulk-code-generator/)  
-    Generowanie 1000 różnych kodów (max 10 znaków).
+12. [**Projekt 12: Bulk Code Generator**](https://mikolajsarna123-wq.github.io/Moje_Projekty_JavaScript/Projekt_12-bulk-code-generator-/)
+    Generowanie 1000 różnych kodów.
 
-13. [**Projekt 13: Array Element Add**](https://mikolajsarna123-wq.github.io/Moje_Projekty_JavaScript/Projekt_13-array-element-add/)  
+13. [**Projekt 13: Array Element Add**](https://mikolajsarna123-wq.github.io/Moje_Projekty_JavaScript/Projekt_13-array-element-add/)
     Dodawanie nowych elementów do tablicy.
 
-14. [**Projekt 14: Random PC Advice**](https://mikolajsarna123-wq.github.io/Moje_Projekty_JavaScript/Projekt_14-random-pc-advice/)  
+14. [**Projekt 14: Random PC Advice**](https://mikolajsarna123-wq.github.io/Moje_Projekty_JavaScript/Projekt_14-random-pc-advice/)
     Losowa rada od komputera.
 
-15. [**Projekt 15: Number Range List**](https://mikolajsarna123-wq.github.io/Moje_Projekty_JavaScript/Projekt_15-number-range-list/)  
-    Bonus: Losowanie i wyświetlanie liczb z podanego zakresu "od-do".
+15. [**Projekt 15: Number Range List**](https://mikolajsarna123-wq.github.io/Moje_Projekty_JavaScript/Projekt_15-number-range-list/)
+    Bonus: Losowanie i wyświetlanie liczb z podanego zakresu.
