@@ -1,7 +1,5 @@
 # Moje Projekty JavaScript (Vanilla JS)
 
-Kliknij w nazwę projektu, aby zobaczyć jego działanie na żywo:
-
 1. [**Projekt 01: Click Add Font Resize**](https://mikolajsarna123-wq.github.io/Moje_Projekty_JavaScript/Projekt_01%20-click-add-font-resize/)  
    Dodawanie elementu po kliknięciu i zmiana FontSize dla liczb podzielnych przez 3.
 
