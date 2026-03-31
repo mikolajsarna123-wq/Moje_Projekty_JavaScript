@@ -38,4 +38,11 @@ Lista projektów z opisem niefunkcjonalności oraz podglądem na żywo:
 12. [**Projekt 12: Bulk Code Generator**](./Projekt_12-bulk-code-generator/) — [**Podgląd Live**](https://mikolajsarna123-wq.github.io/Moje_Projekty_JavaScript/Projekt_12-bulk-code-generator/app.html)  
     Generowanie 1000 różnych kodów (max 10 znaków).
 
-13. [**Projekt 13: Array Element Add**](./Projekt_13-array-element-add/) — [**Podgląd Live**](https://mikolajsarna123-
+13. [**Projekt 13: Array Element Add**](./Projekt_13-array-element-add/) — [**Podgląd Live**](https://mikolajsarna123-wq.github.io/Moje_Projekty_JavaScript/Projekt_13-array-element-add/app.html)  
+    Dodawanie nowych elementów do tablicy.
+
+14. [**Projekt 14: Random PC Advice**](./Projekt_14-random-pc-advice/) — [**Podgląd Live**](https://mikolajsarna123-wq.github.io/Moje_Projekty_JavaScript/Projekt_14-random-pc-advice/app.html)  
+    Losowa rada od komputera.
+
+15. [**Projekt 15: Number Range List**](./Projekt_15-number-range-list/) — [**Podgląd Live**](https://mikolajsarna123-wq.github.io/Moje_Projekty_JavaScript/Projekt_15-number-range-list/app.html)  
+    Bonus: Losowanie i wyświetlanie liczb z podanego zakresu "od-do".
