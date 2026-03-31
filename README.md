@@ -1,7 +1,6 @@
-# 🚀 Moje Projekty JavaScript (Vanilla JS)
+# Moje Projekty JavaScript
 
-Poniżej znajduje się lista moich projektów. Kliknij w nazwę projektu, aby zobaczyć jego **działanie na żywo (Live Demo)**.
-
+Poniżej znajduje się lista moich projektów. 
 ---
 
 1. [**Projekt 01: Click Add Font Resize**](https://mikolajsarna123-wq.github.io/Moje_Projekty_JavaScript/Projekt_01%20-click-add-font-resize/)
