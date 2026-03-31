@@ -46,4 +46,4 @@ Poniżej znajduje się lista moich projektów.
     Losowa rada od komputera.
 
 15. [**Projekt 15: Number Range List**](https://mikolajsarna123-wq.github.io/Moje_Projekty_JavaScript/Projekt_15-number-range-list/)
-    Bonus: Losowanie i wyświetlanie liczb z podanego zakresu.
+   Losowanie i wyświetlanie liczb z podanego zakresu.
