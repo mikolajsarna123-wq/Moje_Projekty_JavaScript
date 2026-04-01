@@ -47,3 +47,6 @@ Poniżej znajduje się lista moich projektów.
 
 15. [**Projekt 15: Number Range List**](https://mikolajsarna123-wq.github.io/Moje_Projekty_JavaScript/Projekt_15-number-range-list/)
    Losowanie i wyświetlanie liczb z podanego zakresu.
+
+16. [**Projekt 16: RPS game**](https://mikolajsarna123-wq.github.io/Moje_Projekty_JavaScript/Projekt_16-RPS/)
+   Gra Kamień,Papier,Nożyce
