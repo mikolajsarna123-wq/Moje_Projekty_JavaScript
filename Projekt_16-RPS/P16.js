@@ -66,7 +66,7 @@ function endGame() {
 //Funkcja starująca
 
 function startGame() {
-  if (!game.playerHand) return alert("wybierz dłoń!!!");
+  if (!game.playerHand) return alert("choose heand!!!");
 
   game.aiHand = aiChoice();
   const gameResult = checkResult(game.playerHand, game.aiHand);
