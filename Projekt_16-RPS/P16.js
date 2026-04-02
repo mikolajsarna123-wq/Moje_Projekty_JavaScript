@@ -1,64 +1,79 @@
-const button = document.querySelector(".start");
-const select = document.querySelector(".select");
-let playerChoice = "";
-let games = 0,
-  wins = 0,
-  losses = 0,
-  draws = 0;
+const gameSummary = {
+  numbers: 0,
+  win: 0,
+  losses: 0,
+  draw: 0,
+};
 
-//image dowload
-const imgs = {
-  paper: document.querySelector('[data-option="paper"]'),
-  rock: document.querySelector('[data-option="rock"]'),
-  scissors: document.querySelector('[data-option="scissors"]'),
+const game = {
+  playerHand: "",
+  aiHand: "",
 };
-//Change borderd
-const changeBorder = (choice) => {
-  Object.values(imgs).forEach((img) => (img.style.border = "none"));
-  imgs[choice].style.border = "5px solid yellow";
-};
-//If target is a img
-const selectRPS = (e) => {
-  const target = e.target;
-  if (target.tagName === "IMG") {
-    playerChoice = target.dataset.option;
-    changeBorder(playerChoice);
-  }
-};
-//UpdateBoard
-const updateBoard = (type, value) => {
-  document.querySelector(`.${type} span`).textContent = value;
-};
-//setSummary
-const setSummary = (key, value) => {
-  document.querySelector(`[data-summary="${key}"]`).textContent = value;
-};
-//play
-const play = () => {
-  if (!playerChoice) return window.alert("Choose something from images");
-  const options = Object.keys(imgs);
-  const computerChoice = options[Math.floor(Math.random() * options.length)];
-  setSummary("your-choice", playerChoice);
-  setSummary("ai-choice", computerChoice);
 
-  //Who win
-  const win =
-    (playerChoice === "rock" && computerChoice === "scissors") ||
-    (playerChoice === "paper" && computerChoice === "rock") ||
-    (playerChoice === "scissors" && computerChoice === "paper");
+const hands = [...document.querySelectorAll(".select img")];
 
-  updateBoard("numbers", ++games);
-  if (playerChoice === computerChoice) {
-    updateBoard("draws", ++draws);
-    setSummary("who-win", "draw");
-  } else if (win) {
-    updateBoard("wins", ++wins);
-    setSummary("who-win", "win");
+//Pierwsza funkcjia
+function handSelection() {
+  game.playerHand = this.dataset.option;
+  hands.forEach((hand) => (hand.style.boxShadow = ""));
+  this.style.boxShadow = "0 0 0 4px yellow";
+}
+
+//Wybór komputera
+
+function aiChoice() {
+  return hands[Math.floor(Math.random() * hands.length)].dataset.option;
+}
+
+function checkResult(player, ai) {
+  if (player == ai) return "draw";
+  else if (
+    (player === "papier" && ai === "kamień") ||
+    (player === "kamień" && ai === "nożyczki") ||
+    (player === "nożyczki" && ai === "papier")
+  )
+    return "win";
+  else return "lose";
+}
+//Publikacja wyniku
+function publisResult(player, ai, result) {
+  document.querySelector('[data-summary="your-choice"]').textContent = player;
+  document.querySelector('[data-summary="ai-choice"]').textContent = ai;
+
+  document.querySelector("p.numbers span").textContent = ++gameSummary.numbers;
+
+  if (result === "win") {
+    document.querySelector("p.wins span").textContent = ++gameSummary.win;
+    document.querySelector('[data-summary="who-win"]').textContent = "You win";
+    document.querySelector('[data-summary="who-win"]').style.color = "green";
+  } else if (result === "lose") {
+    document.querySelector("p.losses span").textContent = ++gameSummary.losses;
+    document.querySelector('[data-summary="who-win"]').textContent =
+      "Computer win";
+    document.querySelector('[data-summary="who-win"]').style.color = "red";
   } else {
-    updateBoard("losses", ++losses);
-    setSummary("who-win", "lose");
+    document.querySelector("p.draws span").textContent = ++gameSummary.draw;
+    document.querySelector('[data-summary="who-win"]').textContent = "Draw :\\";
+    document.querySelector('[data-summary="who-win"]').style.color = "black";
   }
-};
+}
+function endGame() {
+  document.querySelector(`[data-option="${game.playerHand}"]`).style.boxShadow =
+    "";
+  game.playerHand = "";
+}
 
-select.addEventListener("click", selectRPS);
-button.addEventListener("click", play);
+//Funkcja starująca
+
+function startGame() {
+  if (!game.playerHand) return alert("wybierz dłoń!!!");
+
+  game.aiHand = aiChoice();
+  const gameResult = checkResult(game.playerHand, game.aiHand);
+  publisResult(game.playerHand, game.aiHand, gameResult);
+  endGame();
+}
+
+hands.forEach((hand) => hand.addEventListener("click", handSelection));
+
+document.querySelector(".start").addEventListener("click", startGame);
