@@ -28,9 +28,9 @@ function aiChoice() {
 function checkResult(player, ai) {
   if (player == ai) return "draw";
   else if (
-    (player === "papier" && ai === "kamień") ||
-    (player === "kamień" && ai === "nożyczki") ||
-    (player === "nożyczki" && ai === "papier")
+    (player === "paper" && ai === "rock") ||
+    (player === "rock" && ai === "scissors") ||
+    (player === "scissors" && ai === "paper")
   )
     return "win";
   else return "lose";
