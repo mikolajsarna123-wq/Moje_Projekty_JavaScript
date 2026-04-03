@@ -6,7 +6,7 @@
 const spnTxt = document.querySelector(".text");
 const spnCursor = document.querySelector(".cursor");
 //txt[0][2]; //0 odwołanie do 1 elementu i 2 indeksu czyli k
-const txt = ["Marionetka", "Kolczuga", "Wykupić"];
+const txt = ["Marionetka grała na paninie", "Założyłem skurzane spodnie", "Wykupiłem całą biżuterie"];
 
 // //Parametry
 let activeLetter = 0; //wartość początkowa długości teksu
@@ -36,5 +36,5 @@ const cursorAnimation = () => {
   spnCursor.classList.toggle("active");
 };
 // const indexTyping = setInterval(addLetter, time); //Przez określony czas będzie dawać nam 1 literee
-setInterval(cursorAnimation, 400);
+setInterval(cursorAnimation, 300);
 addLetter();
