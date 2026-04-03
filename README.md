@@ -51,5 +51,5 @@ Poniżej znajduje się lista moich projektów.
 16. [**Projekt 16: RPS game**](https://mikolajsarna123-wq.github.io/Moje_Projekty_JavaScript/Projekt_16-RPS/)
    Gra Kamień,Papier,Nożyce
 
-17.[**Projekt 17: Rotating typewriter**](https://mikolajsarna123-wq.github.io/Moje_Projekty_JavaScript/Projekt_17-rotating-typewriter/)
+17. [**Projekt 17: Rotating typewriter**](https://mikolajsarna123-wq.github.io/Moje_Projekty_JavaScript/Projekt_17-rotating-typewriter/)
    Animacja pisania z wymieniającym sie tekstem
