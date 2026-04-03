@@ -53,3 +53,7 @@ Poniżej znajduje się lista moich projektów.
 
 17. [**Projekt 17: Rotating typewriter**](https://mikolajsarna123-wq.github.io/Moje_Projekty_JavaScript/Projekt_17-rotating-typewriter/)
    Animacja pisania z wymieniającym sie tekstem
+
+18. [**Projekt 18: Rotating typewriter**](https://mikolajsarna123-wq.github.io/Moje_Projekty_JavaScript/Projekt_Projekt_18-interactive-banner/)
+   Interaktywny slider z automatyczną rotacją slajdów i pełną obsługą nawigacji za pomocą strzałek klawiatury.
+
