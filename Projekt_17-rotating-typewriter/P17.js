@@ -6,7 +6,7 @@
 const spnTxt = document.querySelector(".text");
 const spnCursor = document.querySelector(".cursor");
 //txt[0][2]; //0 odwołanie do 1 elementu i 2 indeksu czyli k
-const txt = ["Marionetka grała na paninie", "Założyłem skurzane spodnie", "Wykupiłem całą biżuterie"];
+const txt = ["Marionetka grała na pianinie", "Założyłem skórzane spodnie", "Wykupiłem całą biżuterie"];
 
 // //Parametry
 let activeLetter = 0; //wartość początkowa długości teksu
