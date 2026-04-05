@@ -1,0 +1,65 @@
+#line8,#line7,#line6,#line5,#line4,#line3,#line2,#line1{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+.colorSquare {
+  width:80px;
+  height: 80px;
+  background-color: white;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.uncolorSquare{
+  width:80px;
+  height: 80px;
+  background-color: #b497c7;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+#contener {
+  width: 640px;  
+  height: 640px; 
+  border: 3px solid rgb(87, 87, 220);
+ 
+}
+
+body{
+    background-color: rgb(86, 83, 83);
+    margin-left: 600px; 
+    margin-top: 110px;        
+}
+
+
+
+
+.pawn
+{
+    position: absolute;
+    cursor: grab;
+  width:40px;
+  height: 40px;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  background-color: rgb(228, 203, 82);
+
+}
+
+.pawnb
+{
+    position: absolute;
+    cursor: grab;
+  width:40px;
+  height: 40px;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  background-color: rgba(108, 94, 26, 0.799);
+
+}
+
+
+
