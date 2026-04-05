@@ -1,9 +1,23 @@
-const fieldA7 = document.getElementById("A7");
 const dane = document.getElementById("dane");
-// const fieldA6 = document.getElementById("A6");
+const fieldA7 = document.getElementById("A7");
+const fieldA6 = document.getElementById("A6");
+const fieldA2 = document.getElementById("A2");
+const fieldA3 = document.getElementById("A3");
+//
+let newY, newX, startXAfterClick, startYAfterClick, startX, startY, nazwa, clicketPawn;
 //-------------
 const boardMap = {};
+const fields = {};
 const columns = ["A", "B", "C", "D", "E", "F", "G", "H"];
+window.onload = () => {
+  for (let i = 0; i < 8; i++) {
+    for (let j = 1; j <= 8; j++) {
+      const id = `${columns[i]}${j}`;
+      fields[`field${id}`] = document.getElementById(`${columns[i]}${j}`);
+    }
+  }
+};
+
 columns.forEach((col, colIndex) => {
   for (let row = 1; row <= 8; row++) {
     const fieldName = col + row;
@@ -16,9 +30,8 @@ columns.forEach((col, colIndex) => {
   }
 });
 
-let newY, newX, startXAfterClick, startYAfterClick, startX, startY;
-
 function mouseDown(e) {
+  clicketPawn = e.currentTarget;
   startXAfterClick = e.clientX;
   startYAfterClick = e.clientY;
   document.addEventListener("mousemove", mouseMove);
@@ -30,22 +43,29 @@ function mouseMove(e) {
   newY = startYAfterClick - e.clientY;
   startXAfterClick = e.clientX;
   startYAfterClick = e.clientY;
-  fieldA7.style.top = fieldA7.offsetTop - newY + "px";
-  fieldA7.style.left = fieldA7.offsetLeft - newX + "px";
+  clicketPawn.style.top = clicketPawn.offsetTop - newY + "px";
+  clicketPawn.style.left = clicketPawn.offsetLeft - newX + "px";
 }
 
 function mouseUp() {
   document.removeEventListener("mousemove", mouseMove);
+  addEventListener("click", map);
 }
-fieldA7.addEventListener("mousedown", mouseDown);
 
-//Mapowanie
-// const sprawdzanie = () => {
-//   if (( startXAfterClick > 600 &&  startXAfterClick < 680,  startYAfterClick > 300 &&  startYAfterClick < 380)) {
-//     console.log("kpytka");
-//   }
-// };
-addEventListener("click", map);
+//Zmiana
+function change() {
+  switch (nazwa) {
+    case "A6":
+      fieldA7.classList.remove("pawn");
+      fieldA6.classList.add("pawn");
+      break;
+    case "A3":
+      fieldA2.classList.remove("pawnb");
+      fieldA3.classList.add("pawnb");
+  }
+
+  //Mapowanie
+}
 function map(e) {
   const dystantsX = e.clientX - startX;
   const dystantsY = e.clientY - startY;
@@ -54,7 +74,7 @@ function map(e) {
   startX = e.clientX;
   startY = e.clientY;
 
-  let nazwa = "";
+  nazwa = "";
 
   for (nazwa in boardMap) {
     if (
@@ -63,7 +83,12 @@ function map(e) {
       startX >= Math.floor(Math.min(boardMap[nazwa].xStart, boardMap[nazwa].xEnd)) &&
       startX <= Math.floor(Math.max(boardMap[nazwa].xStart, boardMap[nazwa].xEnd))
     ) {
-      dane.textContent = `${dystantsX}:${dystantsY}${startX}:${startY}: nazwa pola : ${nazwa}`;
+      dane.textContent = `${dystantsX}:${dystantsY}:${startX}:${startY}: nazwa pola : ${nazwa}`;
+      change();
     }
   }
 }
+fieldA7.addEventListener("mousedown", mouseDown);
+fieldA6.addEventListener("mousedown", mouseDown);
+fieldA2.addEventListener("mousedown", mouseDown);
+fieldA3.addEventListener("mousedown", mouseDown);
