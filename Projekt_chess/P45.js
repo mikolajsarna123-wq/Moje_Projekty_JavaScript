@@ -1,94 +1,137 @@
-const dane = document.getElementById("dane");
-const fieldA7 = document.getElementById("A7");
-const fieldA6 = document.getElementById("A6");
-const fieldA2 = document.getElementById("A2");
-const fieldA3 = document.getElementById("A3");
-//
-let newY, newX, startXAfterClick, startYAfterClick, startX, startY, nazwa, clicketPawn;
-//-------------
-const boardMap = {};
-const fields = {};
-const columns = ["A", "B", "C", "D", "E", "F", "G", "H"];
-window.onload = () => {
-  for (let i = 0; i < 8; i++) {
-    for (let j = 1; j <= 8; j++) {
-      const id = `${columns[i]}${j}`;
-      fields[`field${id}`] = document.getElementById(`${columns[i]}${j}`);
-    }
-  }
-};
-
-columns.forEach((col, colIndex) => {
-  for (let row = 1; row <= 8; row++) {
-    const fieldName = col + row;
-    boardMap[fieldName] = {
-      xStart: 600 + colIndex * 80,
-      xEnd: 600 + (colIndex + 1) * 80,
-      yStart: 770 - (row - 1) * 80,
-      yEnd: 770 - row * 80
-    };
-  }
-});
+let dragX, dragY, newdragX, newdragY;
+let idFirstElement, idSecendElement, idThridElement, pionek, starePole;
+let firstElement, secendElement, thridElement;
+let flaga = true;
+document.addEventListener("click", mouseDown);
 
 function mouseDown(e) {
-  clicketPawn = e.currentTarget;
-  startXAfterClick = e.clientX;
-  startYAfterClick = e.clientY;
+  const isWhite = e.target.classList.contains("pawn");
+  const isBlack = e.target.classList.contains("pawnb");
+  if (!isWhite && !isBlack) return;
+
+  if (flaga && isBlack) {
+    console.log("Tura białych!");
+    return;
+  }
+
+  if (!flaga && isWhite) {
+    console.log("Tura czarnych!");
+    return;
+  }
+  if (!e.target.classList.contains("pawn") && !e.target.classList.contains("pawnb")) return;
+  pionek = e.target;
+  starePole = pionek.parentElement;
+  dragX = e.clientX;
+  dragY = e.clientY;
+  pionek.style.position = "absolute";
+  pionek.style.pointerEvents = "none";
   document.addEventListener("mousemove", mouseMove);
   document.addEventListener("mouseup", mouseUp);
 }
 
 function mouseMove(e) {
-  newX = startXAfterClick - e.clientX;
-  newY = startYAfterClick - e.clientY;
-  startXAfterClick = e.clientX;
-  startYAfterClick = e.clientY;
-  clicketPawn.style.top = clicketPawn.offsetTop - newY + "px";
-  clicketPawn.style.left = clicketPawn.offsetLeft - newX + "px";
+  if (!pionek) return;
+  newdragX = dragX - e.clientX;
+  newdragY = dragY - e.clientY;
+  dragX = e.clientX;
+  dragY = e.clientY;
+  pionek.style.top = pionek.offsetTop - newdragY + "px";
+  pionek.style.left = pionek.offsetLeft - newdragX + "px";
 }
+function mouseUp(event) {
+  {
+    const allElements = document.elementsFromPoint(event.clientX, event.clientY);
+    thridElement = allElements.find((el) => el.id && el.id.startsWith("line"));
+    secendElement = allElements.find(
+      (el) =>
+        (el.classList.contains("colorSquare") || el.classList.contains("uncolorSquare")) &&
+        el.id !== idFirstElement
+    );
+    firstElement = pionek;
 
-function mouseUp() {
-  document.removeEventListener("mousemove", mouseMove);
-  addEventListener("click", map);
-}
+    if (firstElement) {
+      idFirstElement = firstElement.id;
+      idSecendElement = secendElement ? secendElement.id : "brak pola";
+      idThridElement = thridElement ? thridElement.id : "brak pionka";
 
-//Zmiana
-function change() {
-  switch (nazwa) {
-    case "A6":
-      fieldA7.classList.remove("pawn");
-      fieldA6.classList.add("pawn");
-      break;
-    case "A3":
-      fieldA2.classList.remove("pawnb");
-      fieldA3.classList.add("pawnb");
-  }
-
-  //Mapowanie
-}
-function map(e) {
-  const dystantsX = e.clientX - startX;
-  const dystantsY = e.clientY - startY;
-  newX = startX - e.clientX;
-  newY = startY - e.clientY;
-  startX = e.clientX;
-  startY = e.clientY;
-
-  nazwa = "";
-
-  for (nazwa in boardMap) {
-    if (
-      startY >= Math.floor(Math.min(boardMap[nazwa].yStart, boardMap[nazwa].yEnd)) &&
-      startY <= Math.floor(Math.max(boardMap[nazwa].yStart, boardMap[nazwa].yEnd)) &&
-      startX >= Math.floor(Math.min(boardMap[nazwa].xStart, boardMap[nazwa].xEnd)) &&
-      startX <= Math.floor(Math.max(boardMap[nazwa].xStart, boardMap[nazwa].xEnd))
-    ) {
-      dane.textContent = `${dystantsX}:${dystantsY}:${startX}:${startY}: nazwa pola : ${nazwa}`;
-      change();
+      console.log(idFirstElement);
+      console.log(idSecendElement);
+      console.log(idThridElement);
     }
   }
+
+  pawn();
+  document.removeEventListener("mousemove", mouseMove);
+  document.removeEventListener("mouseup", mouseUp);
+
+  pionek = null;
 }
-fieldA7.addEventListener("mousedown", mouseDown);
-fieldA6.addEventListener("mousedown", mouseDown);
-fieldA2.addEventListener("mousedown", mouseDown);
-fieldA3.addEventListener("mousedown", mouseDown);
+function center() {
+  firstElement.style.position = "static";
+  firstElement.style.top = "auto";
+  firstElement.style.left = "auto";
+  firstElement.style.pointerEvents = "auto";
+}
+
+function pawn() {
+  let firstMoveSuccess = false;
+  // let check = true;
+  const numberStarePole = parseInt(starePole.id.slice(1));
+  const numbersecendElement = parseInt(idSecendElement.slice(1));
+  // if (numbersecendElement > numberStarePole) potrzbuje zeby pionki misię nie cofały
+
+  console.log(numbersecendElement, numberStarePole);
+
+  if (!secendElement || secendElement === starePole || secendElement.children.length > 0) {
+    starePole.appendChild(firstElement);
+    center();
+    return;
+  }
+
+  function fisrMove() {
+    //czy jest biały
+    if (firstElement.className === "pawn") {
+      if (idThridElement === "line5" || idThridElement === "line6") firstMoveSuccess = true;
+      else {
+        secondMove();
+        return;
+      }
+    } else {
+      if (idThridElement === "line3" || idThridElement === "line4") firstMoveSuccess = true;
+      else {
+        secondMove();
+        return;
+      }
+    }
+
+    if (firstMoveSuccess) {
+      secendElement.appendChild(firstElement);
+      center();
+      flaga = !flaga;
+    } else {
+      starePole.appendChild(firstElement);
+      center();
+    }
+  }
+  //_____________________________________--
+  function secondMove() {
+    let secondMoveSuccess = false;
+    //czy jest biały
+    if (firstElement.className === "pawn") {
+      if (idThridElement === "line4") secondMoveSuccess = true;
+    } else {
+      if (idThridElement === "line5") secondMoveSuccess = true;
+    }
+    if (secondMoveSuccess) {
+      secendElement.appendChild(firstElement);
+      center();
+      flaga = !flaga;
+    } else {
+      starePole.appendChild(firstElement);
+      center();
+    }
+  }
+  fisrMove();
+
+  // if (secendMoveSucces) {}
+}
