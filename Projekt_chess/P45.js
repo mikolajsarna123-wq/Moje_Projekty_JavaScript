@@ -3,6 +3,7 @@ let idFirstElement, idSecendElement, idThridElement, pionek, starePole;
 let firstElement, secendElement, thridElement;
 let flaga = true;
 document.addEventListener("click", mouseDown);
+const div = document.getElementById("dane");
 
 function mouseDown(e) {
   const isWhite = e.target.classList.contains("pawn");
@@ -108,6 +109,7 @@ function pawn() {
       secendElement.appendChild(firstElement);
       center();
       flaga = !flaga;
+      div.textContent = `Teraz tura: ${flaga ? "Białe" : "Czarne"}`;
     } else {
       starePole.appendChild(firstElement);
       center();
@@ -126,6 +128,7 @@ function pawn() {
       secendElement.appendChild(firstElement);
       center();
       flaga = !flaga;
+      div.textContent = `Teraz tura: ${flaga ? "Białe" : "Czarne"}`;
     } else {
       starePole.appendChild(firstElement);
       center();
