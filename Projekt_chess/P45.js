@@ -11,12 +11,10 @@ function mouseDown(e) {
   if (!isWhite && !isBlack) return;
 
   if (flaga && isBlack) {
-    console.log("Tura białych!");
     return;
   }
 
   if (!flaga && isWhite) {
-    console.log("Tura czarnych!");
     return;
   }
   if (!e.target.classList.contains("pawn") && !e.target.classList.contains("pawnb")) return;
@@ -55,9 +53,9 @@ function mouseUp(event) {
       idSecendElement = secendElement ? secendElement.id : "brak pola";
       idThridElement = thridElement ? thridElement.id : "brak pionka";
 
-      console.log(idFirstElement);
-      console.log(idSecendElement);
-      console.log(idThridElement);
+      // console.log(idFirstElement);
+      // console.log(idSecendElement);
+      // console.log(idThridElement);
     }
   }
 
@@ -78,17 +76,66 @@ function pawn() {
   let firstMoveSuccess = false;
   // let check = true;
   const numberStarePole = parseInt(starePole.id.slice(1));
-  const numbersecendElement = parseInt(idSecendElement.slice(1));
-  // if (numbersecendElement > numberStarePole) potrzbuje zeby pionki misię nie cofały
+  const numberSecendElement = parseInt(idSecendElement.slice(1));
 
-  console.log(numbersecendElement, numberStarePole);
+  //__________________
+  //zakaz cofania sie
+  if (firstElement.className === "pawn") {
+    if (numberSecendElement >= numberStarePole) {
+      starePole.appendChild(firstElement);
+      center();
+      return;
+    }
+  } else if (firstElement.className === "pawnb") {
+    if (numberSecendElement <= numberStarePole) {
+      starePole.appendChild(firstElement);
+      center();
+      return;
+    }
+  }
 
-  if (!secendElement || secendElement === starePole || secendElement.children.length > 0) {
+  function checkAraund() {
+    //dla białych
+    //sprawdza wszystkie od 7-1;
+    //A sprawdza B
+    //B sprawdza A i C
+    //C sprawdza B i D
+    //D sprawdza C i E
+    //E sprawdza D i F
+    //F sprawdza E i H
+    //G sprawdza F i H
+    //H sprawdza G
+
+    //dla czarnych
+    //sprawdza wszystkie od 1-7;
+    //A sprawdza B
+    //B sprawdza A i C
+    //C sprawdza B i D
+    //D sprawdza C i E
+    //E sprawdza D i F
+    //F sprawdza E i H
+    //G sprawdza F i H
+    //H sprawdza G
+
+    console.log(starePole.id);
+  }
+  checkAraund();
+  // _______________________________________
+  //lista zakazów nie wchodzenie na ten sam pionek jeżeli nie jest na kratce
+  // i jeżeli sie nie ruszył i porszua sie tylko po prostej lini
+  //(z ostatnim bedzie problem bo trzeba bedzie zmienić bo pionki biją na ukoz)
+  if (
+    !secendElement ||
+    secendElement === starePole ||
+    secendElement.children.length > 0 ||
+    starePole.id.slice(0, 1) !== idSecendElement.slice(0, 1)
+  ) {
     starePole.appendChild(firstElement);
     center();
     return;
   }
-
+  //_______________________
+  //pierwszy ruch jest osobna po pionek mze ruszyć sie o 2 pola
   function fisrMove() {
     //czy jest biały
     if (firstElement.className === "pawn") {
@@ -115,14 +162,16 @@ function pawn() {
       center();
     }
   }
-  //_____________________________________--
+  //_____________________________________-
+  //Następny ruch
+
   function secondMove() {
     let secondMoveSuccess = false;
     //czy jest biały
     if (firstElement.className === "pawn") {
-      if (idThridElement === "line4") secondMoveSuccess = true;
+      if (idThridElement === "line4" && numberStarePole != 7) secondMoveSuccess = true;
     } else {
-      if (idThridElement === "line5") secondMoveSuccess = true;
+      if (idThridElement === "line5" && numberStarePole != 2) secondMoveSuccess = true;
     }
     if (secondMoveSuccess) {
       secendElement.appendChild(firstElement);
