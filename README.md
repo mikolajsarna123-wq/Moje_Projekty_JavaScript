@@ -57,6 +57,12 @@ Poniżej znajduje się lista moich projektów.
 18. [**Projekt 18: Rotating typewriter**](https://mikolajsarna123-wq.github.io/Moje_Projekty_JavaScript/Projekt_18-interactive-banner/)
    Interaktywny slider z automatyczną rotacją slajdów i pełną obsługą nawigacji za pomocą strzałek
 
+20. [**Projekt 18: chess-in-progres](https://mikolajsarna123-wq.github.io/Moje_Projekty_JavaScript/Porjekt_chess/)
+   chess
+
+
+
+
 
 
 
