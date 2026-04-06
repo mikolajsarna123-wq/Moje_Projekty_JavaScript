@@ -39,8 +39,9 @@ body{
 
 .pawn
 {
-    position: absolute;
-    cursor: grab;
+  z-index: 100;
+  position: absolute;
+  cursor: grab;
   width:40px;
   height: 40px;
   border-top-left-radius: 50%;
@@ -51,15 +52,14 @@ body{
 
 .pawnb
 {
-    position: absolute;
-    cursor: grab;
+  z-index: 100;
+  position: absolute;
+  cursor: grab;
   width:40px;
   height: 40px;
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
-  background-color: rgba(108, 94, 26, 0.799);
+  background-color: rgb(115, 99, 19);
 
 }
-
-
 
