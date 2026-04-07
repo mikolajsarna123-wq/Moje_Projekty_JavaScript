@@ -1,189 +1,170 @@
-let dragX, dragY, newdragX, newdragY;
-let idFirstElement, idSecendElement, idThridElement, pionek, starePole;
-let firstElement, secendElement, thridElement;
-let flaga = true;
+// 1. Zmienne globalne
+let dragX, dragY, newDragX, newDragY;
+let lineId, oldSquare;
+let piece, square, line;
+let turnFlag = true;
+let isBlackPawn, isWhitePawn, isWhiteKnight, isBlackKnight;
+const array = ["A", "B", "C", "D", "E", "F", "G", "H"];
+let squareNumber, oldSquareNumber, indexo, indexn, isChangingColumn;
+
 document.addEventListener("click", mouseDown);
-const div = document.getElementById("dane");
+const displayDiv = document.getElementById("dane");
 
 function mouseDown(e) {
-  const isWhite = e.target.classList.contains("pawn");
-  const isBlack = e.target.classList.contains("pawnb");
-  if (!isWhite && !isBlack) return;
+  isWhitePawn = e.target.classList.contains("pawnw");
+  isBlackPawn = e.target.classList.contains("pawnb");
+  isWhiteKnight = e.target.classList.contains("knightw");
+  isBlackKnight = e.target.classList.contains("knightb");
 
-  if (flaga && isBlack) {
-    return;
-  }
+  if (!isWhitePawn && !isBlackPawn && !isWhiteKnight && !isBlackKnight) return;
 
-  if (!flaga && isWhite) {
-    return;
-  }
-  if (!e.target.classList.contains("pawn") && !e.target.classList.contains("pawnb")) return;
-  pionek = e.target;
-  starePole = pionek.parentElement;
+  //---LOGIKA TUR---
+  if (turnFlag && (isBlackPawn || isBlackKnight)) return;
+  if (!turnFlag && (isWhitePawn || isWhiteKnight)) return;
+
+  piece = e.target;
+  oldSquare = piece.parentElement;
   dragX = e.clientX;
   dragY = e.clientY;
-  pionek.style.position = "absolute";
-  pionek.style.pointerEvents = "none";
+
+  piece.style.position = "absolute";
+  piece.style.zIndex = "100";
+  piece.style.pointerEvents = "none";
+
   document.addEventListener("mousemove", mouseMove);
   document.addEventListener("mouseup", mouseUp);
 }
 
 function mouseMove(e) {
-  if (!pionek) return;
-  newdragX = dragX - e.clientX;
-  newdragY = dragY - e.clientY;
+  newDragX = dragX - e.clientX;
+  newDragY = dragY - e.clientY;
   dragX = e.clientX;
   dragY = e.clientY;
-  pionek.style.top = pionek.offsetTop - newdragY + "px";
-  pionek.style.left = pionek.offsetLeft - newdragX + "px";
+  piece.style.top = piece.offsetTop - newDragY + "px";
+  piece.style.left = piece.offsetLeft - newDragX + "px";
 }
+
 function mouseUp(event) {
-  {
-    const allElements = document.elementsFromPoint(event.clientX, event.clientY);
-    thridElement = allElements.find((el) => el.id && el.id.startsWith("line"));
-    secendElement = allElements.find(
-      (el) =>
-        (el.classList.contains("colorSquare") || el.classList.contains("uncolorSquare")) &&
-        el.id !== idFirstElement
-    );
-    firstElement = pionek;
+  const allElements = document.elementsFromPoint(event.clientX, event.clientY);
+  line = allElements.find((el) => el.id && el.id.startsWith("line"));
+  square = allElements.find(
+    (el) => el.classList.contains("colorSquare") || el.classList.contains("uncolorSquare")
+  );
 
-    if (firstElement) {
-      idFirstElement = firstElement.id;
-      idSecendElement = secendElement ? secendElement.id : "brak pola";
-      idThridElement = thridElement ? thridElement.id : "brak pionka";
-
-      // console.log(idFirstElement);
-      // console.log(idSecendElement);
-      // console.log(idThridElement);
-    }
+  if (piece && square) {
+    lineId = line ? line.id : "";
+    squareNumber = Number(square.id.slice(1));
+    oldSquareNumber = Number(oldSquare.id.slice(1));
+    indexo = array.indexOf(oldSquare.id[0]);
+    indexn = array.indexOf(square.id[0]);
+    isChangingColumn = oldSquare.id[0] !== square.id[0];
+    //--WYWOŁYWANIE LOGIKI---
+    if (isWhitePawn || isBlackPawn) pawnLogic();
+    if (isWhiteKnight || isBlackKnight) knightLogic();
+  } else if (piece) {
+    reset();
   }
 
-  pawn();
   document.removeEventListener("mousemove", mouseMove);
   document.removeEventListener("mouseup", mouseUp);
-
-  pionek = null;
-}
-function center() {
-  firstElement.style.position = "static";
-  firstElement.style.top = "auto";
-  firstElement.style.left = "auto";
-  firstElement.style.pointerEvents = "auto";
 }
 
-function pawn() {
-  let firstMoveSuccess = false;
-  // let check = true;
-  const numberStarePole = parseInt(starePole.id.slice(1));
-  const numberSecendElement = parseInt(idSecendElement.slice(1));
-
-  //__________________
-  //zakaz cofania sie
-  if (firstElement.className === "pawn") {
-    if (numberSecendElement >= numberStarePole) {
-      starePole.appendChild(firstElement);
-      center();
-      return;
-    }
-  } else if (firstElement.className === "pawnb") {
-    if (numberSecendElement <= numberStarePole) {
-      starePole.appendChild(firstElement);
-      center();
-      return;
-    }
-  }
-
-  function checkAraund() {
-    //dla białych
-    //sprawdza wszystkie od 7-1;
-    //A sprawdza B
-    //B sprawdza A i C
-    //C sprawdza B i D
-    //D sprawdza C i E
-    //E sprawdza D i F
-    //F sprawdza E i H
-    //G sprawdza F i H
-    //H sprawdza G
-
-    //dla czarnych
-    //sprawdza wszystkie od 1-7;
-    //A sprawdza B
-    //B sprawdza A i C
-    //C sprawdza B i D
-    //D sprawdza C i E
-    //E sprawdza D i F
-    //F sprawdza E i H
-    //G sprawdza F i H
-    //H sprawdza G
-
-    console.log(starePole.id);
-  }
-  checkAraund();
-  // _______________________________________
-  //lista zakazów nie wchodzenie na ten sam pionek jeżeli nie jest na kratce
-  // i jeżeli sie nie ruszył i porszua sie tylko po prostej lini
-  //(z ostatnim bedzie problem bo trzeba bedzie zmienić bo pionki biją na ukoz)
-  if (
-    !secendElement ||
-    secendElement === starePole ||
-    secendElement.children.length > 0 ||
-    starePole.id.slice(0, 1) !== idSecendElement.slice(0, 1)
-  ) {
-    starePole.appendChild(firstElement);
-    center();
+// --- LOGIKA PIONKA ---
+function pawnLogic() {
+  if (square === oldSquare) {
+    reset();
     return;
   }
-  //_______________________
-  //pierwszy ruch jest osobna po pionek mze ruszyć sie o 2 pola
-  function fisrMove() {
-    //czy jest biały
-    if (firstElement.className === "pawn") {
-      if (idThridElement === "line5" || idThridElement === "line6") firstMoveSuccess = true;
-      else {
-        secondMove();
-        return;
-      }
+
+  const hasChild = square.children.length > 0;
+  const isWhite = piece.classList.contains("pawnw");
+
+  //---BRAK COFANIA I BICIA PRSOSTO---
+  if (isWhite && (squareNumber >= oldSquareNumber || (!isChangingColumn && hasChild))) {
+    reset();
+    return;
+  }
+  if (!isWhite && (squareNumber <= oldSquareNumber || (!isChangingColumn && hasChild))) {
+    reset();
+    return;
+  }
+
+  if (isChangingColumn) {
+    const distance = isWhite ? oldSquareNumber - squareNumber : squareNumber - oldSquareNumber;
+    if (distance === 1 && hasChild && !isFriendlyFire(square, piece)) {
+      square.appendChild(piece);
+      captureLogic();
+      finishTurn();
     } else {
-      if (idThridElement === "line3" || idThridElement === "line4") firstMoveSuccess = true;
-      else {
-        secondMove();
-        return;
-      }
+      reset();
+    }
+  } else {
+    //---PORUSZANIE SIE PROSTO----
+    let canMove = false;
+    const diff = isWhite ? oldSquareNumber - squareNumber : squareNumber - oldSquareNumber;
+
+    if (diff === 1) canMove = true;
+    else if (diff === 2) {
+      if (isWhite && (lineId === "line5" || lineId === "line6")) canMove = true;
+      else if (!isWhite && (lineId === "line3" || lineId === "line4")) canMove = true;
     }
 
-    if (firstMoveSuccess) {
-      secendElement.appendChild(firstElement);
-      center();
-      flaga = !flaga;
-      div.textContent = `Teraz tura: ${flaga ? "Białe" : "Czarne"}`;
+    if (canMove && !hasChild) {
+      square.appendChild(piece);
+      finishTurn();
     } else {
-      starePole.appendChild(firstElement);
-      center();
+      reset();
     }
   }
-  //_____________________________________-
-  //Następny ruch
-
-  function secondMove() {
-    let secondMoveSuccess = false;
-    //czy jest biały
-    if (firstElement.className === "pawn") {
-      if (idThridElement === "line4" && numberStarePole != 7) secondMoveSuccess = true;
+}
+// --- LOGIKA KONIA----
+function knightLogic() {
+  if (
+    indexn != indexo &&
+    squareNumber != oldSquareNumber &&
+    (Math.abs(indexn - indexo) === 2 || Math.abs(squareNumber - oldSquareNumber) === 2)
+  ) {
+    if (!isFriendlyFire(square, piece)) {
+      square.appendChild(piece);
+      captureLogic();
+      finishTurn();
     } else {
-      if (idThridElement === "line5" && numberStarePole != 2) secondMoveSuccess = true;
+      reset();
     }
-    if (secondMoveSuccess) {
-      secendElement.appendChild(firstElement);
-      center();
-      flaga = !flaga;
-      div.textContent = `Teraz tura: ${flaga ? "Białe" : "Czarne"}`;
-    } else {
-      starePole.appendChild(firstElement);
-      center();
-    }
+  } else {
+    reset();
   }
-  fisrMove();
+}
 
-  // if (secendMoveSucces) {}
+// --- FUNKCJE POMOCNICZE ---
+
+function finishTurn() {
+  center();
+  turnFlag = !turnFlag;
+  displayDiv.textContent = `Teraz tura: ${turnFlag ? "Białe" : "Czarne"}`;
+}
+
+function reset() {
+  oldSquare.appendChild(piece);
+  center();
+}
+
+function center() {
+  piece.style.position = "static";
+  piece.style.top = "auto";
+  piece.style.left = "auto";
+  piece.style.pointerEvents = "auto";
+}
+
+function captureLogic() {
+  if (square.children.length > 1) {
+    square.removeChild(square.children[0]);
+  }
+}
+
+function isFriendlyFire(targetSquare, movingPiece) {
+  if (targetSquare.children.length === 0) return false;
+  const myColor = movingPiece.className.slice(-1);
+  const victimColor = targetSquare.children[0].className.slice(-1);
+  return myColor === victimColor;
 }
