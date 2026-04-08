@@ -37,7 +37,7 @@ body{
 
 
 
-.pawn
+.pawnw
 {
   z-index: 100;
   position: absolute;
@@ -62,4 +62,63 @@ body{
   background-color: rgb(115, 99, 19);
 
 }
+.knightw{
+   z-index: 100;
+  position: absolute;
+  cursor: grab;
+  width:40px;
+  height: 40px;
+  clip-path: polygon(10% 30%, 100% 0%, 50% 80%, 0% 100%, 0% 20%);
 
+  background-color: rgb(228, 203, 82);
+}
+
+.knightb{
+   z-index: 100;
+  position: absolute;
+  cursor: grab;
+  width:40px;
+  height: 40px;
+  clip-path: polygon(10% 30%, 100% 0%, 50% 80%, 0% 100%, 0% 20%);
+
+  background-color: rgb(115, 99, 19);
+}
+.rockw{
+   z-index: 100;
+  position: absolute;
+  cursor: grab;
+  width:40px;
+  height: 40px;
+clip-path: polygon(
+  0% 0%, 33% 0%, 33% 15%, 66% 15%, 66% 0%, 100% 0%, 
+  100% 25%, 85% 25%, 85% 85%, 100% 100%, 
+  0% 100%, 15% 85%, 15% 25%, 0% 25%
+);
+  background-color: rgb(228, 203, 82);
+}
+.rockb{
+   z-index: 100;
+  position: absolute;
+  cursor: grab;
+  width:40px;
+  height: 40px;
+clip-path: polygon(
+  0% 0%, 33% 0%, 33% 15%, 66% 15%, 66% 0%, 100% 0%, 
+  100% 25%, 85% 25%, 85% 85%, 100% 100%, 
+  0% 100%, 15% 85%, 15% 25%, 0% 25%
+);
+  background-color: rgb(228, 203, 82);
+}
+.rockb{
+   z-index: 100;
+  position: absolute;
+  cursor: grab;
+  width:40px;
+  height: 40px;
+clip-path: polygon(
+  0% 0%, 33% 0%, 33% 15%, 66% 15%, 66% 0%, 100% 0%, 
+  100% 25%, 85% 25%, 85% 85%, 100% 100%, 
+  0% 100%, 15% 85%, 15% 25%, 0% 25%
+);
+  background-color: rgb(115, 99, 19);}
+  
