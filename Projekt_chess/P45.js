@@ -162,9 +162,8 @@ function knightLogic() {
   }
 }
 
+// --- LOGIKA WIERZY----
 function rockLogic() {
-  // console.log(oldSquareNumber, indexo);
-  // console.log(squareNumber, indexn);
   console.log(oldSquareNumber, indexo);
   console.log(indexn, squareNumber);
   const dX1 = Math.abs(indexn - indexo);
@@ -180,11 +179,8 @@ function rockLogic() {
     reset();
   }
 }
+// --- LOGIKA GOŃCA----
 function bishopLogic() {
-  // console.log(oldSquareNumber, indexo);
-  // console.log(squareNumber, indexn);
-  console.log(oldSquareNumber, indexo);
-  console.log(indexn, squareNumber);
   const dX1 = Math.abs(indexn - indexo);
   const dY1 = Math.abs(squareNumber - oldSquareNumber);
   console.log(dX1, dY1);
@@ -193,7 +189,6 @@ function bishopLogic() {
     square.appendChild(piece);
     finishTurn();
     captureLogic();
-    console.log("buja");
   } else {
     reset();
   }
