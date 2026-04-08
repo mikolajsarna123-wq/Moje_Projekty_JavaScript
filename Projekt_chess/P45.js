@@ -14,7 +14,7 @@ let isBlackPawn,
 const array = ["A", "B", "C", "D", "E", "F", "G", "H"];
 let squareNumber, oldSquareNumber, indexo, indexn, isChangingColumn;
 
-document.addEventListener("click", mouseDown);
+document.addEventListener("mousedown", mouseDown);
 const displayDiv = document.getElementById("dane");
 
 function mouseDown(e) {
