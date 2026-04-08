@@ -122,3 +122,22 @@ clip-path: polygon(
 );
   background-color: rgb(115, 99, 19);}
   
+  .bishopw{z-index: 100;
+  position: absolute;
+  cursor: grab;
+  width:40px;
+  height: 40px;
+clip-path: polygon(25% 100%, 75% 100%, 90% 40%, 70% 0%, 30% 0%, 10% 40%);
+  background-color: rgb(228, 203, 82);
+    
+  }
+  .bishopb{z-index: 100;
+  position: absolute;
+  cursor: grab;
+  width:40px;
+  height: 40px;
+clip-path: polygon(25% 100%, 75% 100%, 90% 40%, 70% 0%, 30% 0%, 10% 40%);
+  background-color: rgb(115, 99, 19);
+  }
+  
+  
