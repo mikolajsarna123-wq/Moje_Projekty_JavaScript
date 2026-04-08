@@ -3,7 +3,14 @@ let dragX, dragY, newDragX, newDragY;
 let lineId, oldSquare;
 let piece, square, line;
 let turnFlag = true;
-let isBlackPawn, isWhitePawn, isWhiteKnight, isBlackKnight;
+let isBlackPawn,
+  isWhitePawn,
+  isWhiteKnight,
+  isBlackKnight,
+  isWhiteRock,
+  isBlackRock,
+  isWhiteBishop,
+  isBlackBishop;
 const array = ["A", "B", "C", "D", "E", "F", "G", "H"];
 let squareNumber, oldSquareNumber, indexo, indexn, isChangingColumn;
 
@@ -15,12 +22,26 @@ function mouseDown(e) {
   isBlackPawn = e.target.classList.contains("pawnb");
   isWhiteKnight = e.target.classList.contains("knightw");
   isBlackKnight = e.target.classList.contains("knightb");
+  isWhiteRock = e.target.classList.contains("rockw");
+  isBlackRock = e.target.classList.contains("rockb");
+  isWhiteBishop = e.target.classList.contains("bishopw");
+  isBlackBishop = e.target.classList.contains("bishopb");
 
-  if (!isWhitePawn && !isBlackPawn && !isWhiteKnight && !isBlackKnight) return;
+  if (
+    !isWhitePawn &&
+    !isBlackPawn &&
+    !isWhiteKnight &&
+    !isBlackKnight &&
+    !isWhiteRock &&
+    !isBlackRock &&
+    !isWhiteBishop &&
+    !isBlackBishop
+  )
+    return;
 
   //---LOGIKA TUR---
-  if (turnFlag && (isBlackPawn || isBlackKnight)) return;
-  if (!turnFlag && (isWhitePawn || isWhiteKnight)) return;
+  if (turnFlag && (isBlackPawn || isBlackKnight || isBlackRock || isBlackBishop)) return;
+  if (!turnFlag && (isWhitePawn || isWhiteKnight || isWhiteRock || isWhiteBishop)) return;
 
   piece = e.target;
   oldSquare = piece.parentElement;
@@ -61,6 +82,8 @@ function mouseUp(event) {
     //--WYWOŁYWANIE LOGIKI---
     if (isWhitePawn || isBlackPawn) pawnLogic();
     if (isWhiteKnight || isBlackKnight) knightLogic();
+    if (isWhiteRock || isBlackRock) rockLogic();
+    if (isWhiteBishop || isBlackBishop) bishopLogic();
   } else if (piece) {
     reset();
   }
@@ -119,11 +142,14 @@ function pawnLogic() {
 }
 // --- LOGIKA KONIA----
 function knightLogic() {
-  if (
-    indexn != indexo &&
-    squareNumber != oldSquareNumber &&
-    (Math.abs(indexn - indexo) === 2 || Math.abs(squareNumber - oldSquareNumber) === 2)
-  ) {
+  const dX2 = Math.abs(indexn - indexo) === 2;
+  const dY2 = Math.abs(squareNumber - oldSquareNumber) === 2;
+  const dX1 = Math.abs(indexn - indexo) === 1;
+  const dY1 = Math.abs(squareNumber - oldSquareNumber) === 1;
+
+  //kiedy dy jest równe 2 to dx ma być równe 1 i odwrotnie
+
+  if (indexn != indexo && squareNumber != oldSquareNumber && ((dX2 && dY1) || (dY2 && dX1))) {
     if (!isFriendlyFire(square, piece)) {
       square.appendChild(piece);
       captureLogic();
@@ -131,6 +157,43 @@ function knightLogic() {
     } else {
       reset();
     }
+  } else {
+    reset();
+  }
+}
+
+function rockLogic() {
+  // console.log(oldSquareNumber, indexo);
+  // console.log(squareNumber, indexn);
+  console.log(oldSquareNumber, indexo);
+  console.log(indexn, squareNumber);
+  const dX1 = Math.abs(indexn - indexo);
+  const dY1 = Math.abs(squareNumber - oldSquareNumber);
+  console.log(dX1, dY1);
+  if ((!isFriendlyFire(square, piece) && dX1 == 0) || dY1 == 0) {
+    captureLogic();
+    square.appendChild(piece);
+    finishTurn();
+    captureLogic();
+    console.log("buja");
+  } else {
+    reset();
+  }
+}
+function bishopLogic() {
+  // console.log(oldSquareNumber, indexo);
+  // console.log(squareNumber, indexn);
+  console.log(oldSquareNumber, indexo);
+  console.log(indexn, squareNumber);
+  const dX1 = Math.abs(indexn - indexo);
+  const dY1 = Math.abs(squareNumber - oldSquareNumber);
+  console.log(dX1, dY1);
+  if (!isFriendlyFire(square, piece) && dX1 == dY1) {
+    captureLogic();
+    square.appendChild(piece);
+    finishTurn();
+    captureLogic();
+    console.log("buja");
   } else {
     reset();
   }
