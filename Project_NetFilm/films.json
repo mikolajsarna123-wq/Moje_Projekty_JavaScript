@@ -1,0 +1,65 @@
+{
+  "movies": [
+    {
+      "Title": "Gladdiator",
+      "Category": ["Dramat", "Akcja", "Film"],
+      "Movie_length": "2h 35min"
+    },
+    {
+      "Title": "Memento",
+      "Category": ["Thriller","Kryminał", "Film"],
+      "Movie_length": "1h 53min"
+    },
+    {
+      "Title": "Requiem dla snu ",
+      "Category": ["Horror","Dramat", "Film"],
+      "Movie_length": "1h 42min"
+    },
+    {
+      "Title": "Czekolada ",
+      "Category": ["Romans","Komedia", "Film"],
+      "Movie_length": "2h"
+    },
+    {
+      "Title": "Patriota ",
+      "Category": ["Wojenny","Ackja", "Film"],
+      "Movie_length": "2h 45min"
+    },
+    {
+      "Title": "Ogniem i mieczem",
+      "Category": ["Wojenny","Przygodowy", "Film"],
+      "Movie_length": "3h"
+    },
+    {
+      "Title": "M jak miłość",
+      "Category": ["Dramat", "Serial"],
+      "Sezons": "13"
+    },
+    {
+      "Title": "Kochane kłopoty",
+      "Category": ["Dramat", "Serial"],
+      "Sezons": "7"
+    },
+    {
+      "Title": "Kawaleria powietrzna",
+      "Category": ["Dokumentalny", "Serial"],
+      "Sezons": "1"
+    },
+    {
+      "Title": "Agent",
+      "Category": ["Kryminał", "Serial"],
+      "Sezons": "3"
+    },
+    {
+      "Title": "Friends",
+      "Category": ["Sitcom","Komedia", "Serial"],
+      "Sezons": "10"
+    },
+    {
+      "Title": "Dr House",
+      "Category": ["Dramat"],
+      "Sezons": "8"
+    }
+    
+  ]
+}

@@ -1,0 +1,42 @@
+body{
+    background-color: rgb(22, 21, 21)
+}
+.contener1{
+     display: flex ;
+     justify-content: center
+}
+select{
+    background-color: #141414; 
+    color: white;            
+    border: 1px solid #444;
+    padding: 5px 15px;
+    border-radius: 4px;    
+    cursor: pointer;
+    outline: none;         
+    transition: 0.3s;
+    
+}
+
+label{color:white;margin-left: 10px;}
+.contener2 {
+    display: auto;
+    align-items: center;    
+    text-align: center; 
+}
+
+img{
+    width: 180px;
+    height:100px;
+    margin: 20px;
+}
+span{font-size:60px;}
+.F{color:rgb(108, 108, 231);}
+
+h1{
+    color:white;
+    margin-left: 5vw;
+    font-size:40px;
+  ;
+    text-shadow: 10px 10px 70px rgb(43, 43, 181);
+    font-family: sans-serif;    
+}

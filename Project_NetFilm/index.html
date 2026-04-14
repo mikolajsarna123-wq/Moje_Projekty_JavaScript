@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NetFilm</title>
+    <meta name="description" content="Strona Z filmami">
+    <link rel="stylesheet" href="style.css">
+ 
+</head>
+
+
+<body>
+    
+<h1><span>N</span>et<span class="F">F</span>ilm</h1>
+<div class="contener1">
+<label for="movie-select">Kategoria
+    <select>
+    <option value="all">Wszystkie</option>
+    <option value="Ackja">Ackja</option>
+    <option value="Dokumentalny">Dokumentalny</option>
+    <option value="Dramat">Dramat</option>
+    <option value="Horror">Horror</option>
+    <option value="Komedia">Komedia</option>
+    <option value="Kryminał">Kryminał</option>
+    <option value="Romans">Romans</option>
+    <option value="Sitcom">Sitcom</option>
+    <option value="Thriller">Thriller</option>
+    <option value="Wojenny">Wojenny</option>
+</select>
+</label>
+
+<label for="movie-select">
+    Długość
+    <input type="range" min="0" max="300" step="1" value="0" 
+           oninput="formatujCzas(this)">
+    <output id="wynik">0h 00min</output>
+</label>
+
+<label for="movie-select">Format
+    <select>
+    <option value="k">Wszystkie</option>
+    <option value="Film">Film</option>
+    <option value="Serial">Serial</option>
+   
+</select>
+</label>
+
+</div>
+
+
+<div class="contener2">
+<img src="imagines/gladiator.jpg" alt="Gladiator">
+<img src="imagines/Memento.jpg" alt="Memento">
+<img src="imagines/Requiem_dla_snu.jpg" alt="Requiem_dla_snu">
+<img src="imagines/czekoladka.webp" alt="Czekoladka">
+<img src="imagines/patriota.avif" alt="Patriota">
+<img src="imagines/ogniem_i_mieczem.jpg" alt="Ogniem_i_mieczem">
+<img src="imagines/M_jak_milosc.jpg" alt="M_jak_milosc">
+<img src="imagines/Girls.webp" alt="Girls">
+<img src="imagines/kawaleria_powietrzna.jpg" alt="Kawaleria_powietrzna">
+<img src="imagines/Friends.webp" alt="Friends">
+<img src="imagines/Agent.jpg" alt="Agent">
+<img src="imagines/dr_House.jpg" alt="House">
+</div>
+<script src="netflix.js"></script>
+</body>
+
+
+</html>
