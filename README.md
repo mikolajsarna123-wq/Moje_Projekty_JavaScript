@@ -59,6 +59,8 @@ Poniżej znajduje się lista moich projektów.
 
 19. [**Projekt 19: chess-in-progres**](https://mikolajsarna123-wq.github.io/Moje_Projekty_JavaScript/Projekt_chess/)
    chess
+20. [**Projekt 20: NetFilm-progres**](https://mikolajsarna123-wq.github.io/Moje_Projekty_JavaScript/Project_NetFilm/)
+    Podróbka Netflixa
 
 
 
