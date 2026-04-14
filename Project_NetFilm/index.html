@@ -14,8 +14,8 @@
     
 <h1><span>N</span>et<span class="F">F</span>ilm</h1>
 <div class="contener1">
-<label for="movie-select">Kategoria
-    <select>
+<label>Kategoria
+    <select id="selectCategory">
     <option value="all">Wszystkie</option>
     <option value="Ackja">Ackja</option>
     <option value="Dokumentalny">Dokumentalny</option>
@@ -30,22 +30,23 @@
 </select>
 </label>
 
-<label for="movie-select">
+<label >
     Długość
     <input type="range" min="0" max="300" step="1" value="0" 
            oninput="formatujCzas(this)">
     <output id="wynik">0h 00min</output>
+    
 </label>
 
-<label for="movie-select">Format
-    <select>
-    <option value="k">Wszystkie</option>
+<label>Format
+    <select id="selectType">
+    <option value="All">Wszystkie</option>
     <option value="Film">Film</option>
     <option value="Serial">Serial</option>
    
 </select>
 </label>
-
+    <button>Zatwierdz</button>
 </div>
 
 
@@ -63,7 +64,7 @@
 <img src="imagines/Agent.jpg" alt="Agent">
 <img src="imagines/dr_House.jpg" alt="House">
 </div>
-<script src="netflix.js"></script>
+<script type="module" src="netflix.js"></script>
 </body>
 
 
