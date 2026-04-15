@@ -1,6 +1,7 @@
-#wynik,label,select,button,h1,.opis{
-    color:white;
+#wynik, label, select, button, h1, .opis {
+    color: white;
 }
+
 body {
     background-color: rgb(22, 21, 21);
     margin: 0;
@@ -14,17 +15,12 @@ body {
      padding: 20px;
 }
 
-.filter-group {
-    display: flex;
-    align-items: center;
-}
-
-label{
+label {
     margin-left: 5vw;
 }
 
 select {
-    background-color: #141414;             
+    background-color: #141414; 
     border: 1px solid #444;
     padding: 5px 15px;
     border-radius: 4px;    
