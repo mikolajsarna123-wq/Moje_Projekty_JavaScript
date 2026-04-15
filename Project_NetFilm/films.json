@@ -1,7 +1,7 @@
 {
   "movies": [
     {
-      "Title": "Gladdiator",
+      "Title": "Gladiator",
       "Category": ["Dramat", "Akcja"],
       "Format":"Film",
       "Movie_length": 155
@@ -43,7 +43,7 @@
       "Sezons": 13
     },
     {
-      "Title": "Girlmore girls",
+      "Title": "Gilmore girls",
       "Category": ["Dramat"],
       "Format":"Serial",
       "Sezons": 7
