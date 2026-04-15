@@ -10,24 +10,78 @@ function formatujCzas(suwak) {
   suwak = `${m}${h}`;
   return minuty;
 }
-window.formatujCzas = formatujCzas;
-//Tablica od 0-11
 
-function Zczytaj(option, kategoria, typ, length, suwak) {
-  //Wybieranie kategori
-  option = document.getElementById("selectCategory");
-  kategoria = option.value;
-  console.log(kategoria);
-  //Wybieranie typu
-  option = document.getElementById("selectType");
-  typ = option.value;
-  console.log(typ);
-  //Wybieranie długości filmu
-  suwak = document.querySelector('input[type="range"]');
-  length = formatujCzas(suwak);
-  console.log(`minuty ${length}`);
+window.formatujCzas = formatujCzas;
+
+//funkcja Paska
+function Zczytaj() {
+  //WYBIERANIE KATEGORI
+  const kategoria = document.getElementById("selectCategory").value;
+  //WYBIERANIE FORMATU
+  const typ = document.getElementById("selectType").value;
+  //WYBIERANIE CZASU FILMU
+  const suwak = document.querySelector('input[type="range"]');
+  const length = formatujCzas(suwak);
+  //DANE DO FILTRU
+  filterToMovies(length, typ, kategoria);
+}
+//FILTROWANIE
+function filterToMovies(length, typ, kategoria) {
+  const result = dane.movies.filter((film) => {
+    const time = !film.Movie_length || film.Movie_length >= length;
+    const kat = kategoria === "all" || film.Category.includes(kategoria);
+    const format = typ === "all" || film.Format === typ;
+
+    return time && kat && format;
+  });
+
+  const sameTytuly = result.map((film) => film.Title);
+
+  const filmyWKontenerze = document.querySelectorAll(".contener2 .film");
+  //SPRAWDZANIE TYTUŁU
+  filmyWKontenerze.forEach((div) => {
+    const czyPasuje = sameTytuly.includes(div.querySelector("img").alt);
+    //POJAWIANIE I ZNIKANIE SIE STYLU
+    if (czyPasuje) {
+      div.style.display = "block";
+    } else {
+      div.style.display = "none";
+    }
+  });
+  return result;
 }
 
-console.log(dane.movies[0].Title);
+document.addEventListener("click", (e) => {
+  if (e.target.tagName !== "IMG") return;
+  let img = e.target.alt;
+  console.log(img);
+});
+
+function wprowadzenie(e) {
+  let opis = document.querySelector(".opis");
+
+  if (e.target.tagName === "IMG") {
+    if (!opis) {
+      let div = document.createElement("div");
+      div.classList.add("opis");
+      div.textContent = e.target.alt; //tu narazie jest film a bede chciał dodać opis
+      let rodzic = e.target.parentElement;
+
+      setTimeout(() => {
+        if (e.target.parentElement && e.target.matches(":hover")) {
+          rodzic.appendChild(div);
+        }
+      }, 2000);
+    }
+  } else {
+    if (opis) {
+      opis.remove();
+    }
+  }
+}
+
+document
+  .querySelector(".contener2")
+  .addEventListener("mouseover", wprowadzenie);
 
 document.querySelector("button").addEventListener("click", Zczytaj);
