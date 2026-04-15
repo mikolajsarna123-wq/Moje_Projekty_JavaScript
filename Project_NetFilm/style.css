@@ -16,13 +16,21 @@ select{
     transition: 0.3s;
     
 }
+input{ cursor: pointer;}
 
-label{color:white;margin-left: 10px;}
+label{color:white;margin-left: 5vw;}
 .contener2 {
-    display: auto;
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;    
     text-align: center; 
 }
+
+.film {
+    position: relative;
+    display: inline-block;
+}
+
 button{
   background: #0389b6;
   color: white;
@@ -33,12 +41,23 @@ button{
   cursor: pointer;
   margin-left: 20px;
 }
-button:hover { background: #1eb4e6;; transform: scale(1.05); }
+button:hover { background: #1eb4e6; transform: scale(1.05); transition: 0.2s; }
+button:active { background:#45c2ec; transform: scale(0.95); transition: 0.2s; }
+
 img{
     width: 180px;
     height:100px;
     margin: 20px;
 }
+img:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+    box-shadow: 0 4px 8px rgba(181, 0, 247, 0.632);
+    filter: blur(1px);
+    transition: filter 0.5s ease 1.5s;
+}
+img:active {transform: scale(0.95);transition: 0.2s}
+
 span{font-size:60px;}
 .F{color:rgb(108, 108, 231);}
 
@@ -48,4 +67,22 @@ h1{
     font-size:40px;
     text-shadow: 10px 10px 70px rgb(43, 43, 181);
     font-family: sans-serif;    
+}
+
+.opis{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 198px;
+    height:111px;
+    margin-left: 11px;
+    margin-top: 15px;
+    background-color: rgba(47, 45, 45, 0.533);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+   
+   
 }
