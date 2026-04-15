@@ -57,9 +57,7 @@ Poniżej znajduje się lista moich projektów.
 18. [**Projekt 18: Rotating typewriter**](https://mikolajsarna123-wq.github.io/Moje_Projekty_JavaScript/Projekt_18-interactive-banner/)
    Interaktywny slider z automatyczną rotacją slajdów i pełną obsługą nawigacji za pomocą strzałek
 
-19. [**Projekt 19: chess-in-progres**](https://mikolajsarna123-wq.github.io/Moje_Projekty_JavaScript/Projekt_chess/)
-   chess
-20. [**Projekt 20: NetFilm-progres**](https://mikolajsarna123-wq.github.io/Moje_Projekty_JavaScript/Project_NetFilm/)
+19. [**Projekt 19: NetFilm-progres**](https://mikolajsarna123-wq.github.io/Moje_Projekty_JavaScript/Project_NetFilm/)
     Podróbka Netflixa
 
 
