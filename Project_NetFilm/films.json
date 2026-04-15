@@ -2,63 +2,75 @@
   "movies": [
     {
       "Title": "Gladdiator",
-      "Category": ["Dramat", "Akcja", "Film"],
-      "Movie_length": "2h 35min"
+      "Category": ["Dramat", "Akcja"],
+      "Format":"Film",
+      "Movie_length": 155
     },
     {
       "Title": "Memento",
-      "Category": ["Thriller","Kryminał", "Film"],
-      "Movie_length": "1h 53min"
+      "Category": ["Thriller","Kryminał"],
+      "Format":"Film",
+      "Movie_length": 113
     },
     {
-      "Title": "Requiem dla snu ",
-      "Category": ["Horror","Dramat", "Film"],
-      "Movie_length": "1h 42min"
+      "Title": "Requiem dla snu",
+      "Category": ["Horror","Dramat"],
+      "Format":"Film",
+      "Movie_length": 102
     },
     {
-      "Title": "Czekolada ",
-      "Category": ["Romans","Komedia", "Film"],
-      "Movie_length": "2h"
+      "Title": "Czekoladka",
+      "Category": ["Romans","Komedia"],
+      "Format":"Film",
+      "Movie_length": 120
     },
     {
-      "Title": "Patriota ",
-      "Category": ["Wojenny","Ackja", "Film"],
-      "Movie_length": "2h 45min"
+      "Title": "Patriota",
+      "Category": ["Wojenny","Ackja"],
+      "Format":"Film",
+      "Movie_length": 165
     },
     {
       "Title": "Ogniem i mieczem",
-      "Category": ["Wojenny","Przygodowy", "Film"],
-      "Movie_length": "3h"
+      "Category": ["Wojenny","Przygodowy"],
+      "Format":"Film",
+      "Movie_length": 180
     },
     {
-      "Title": "M jak miłość",
-      "Category": ["Dramat", "Serial"],
-      "Sezons": "13"
+      "Title": "M jak milosc",
+      "Category": ["Dramat"],
+      "Format":"Serial",
+      "Sezons": 13
     },
     {
-      "Title": "Kochane kłopoty",
-      "Category": ["Dramat", "Serial"],
-      "Sezons": "7"
+      "Title": "Girlmore girls",
+      "Category": ["Dramat"],
+      "Format":"Serial",
+      "Sezons": 7
     },
     {
       "Title": "Kawaleria powietrzna",
-      "Category": ["Dokumentalny", "Serial"],
-      "Sezons": "1"
+      "Category": ["Dokumentalny"],
+      "Format":"Serial",
+      "Sezons": 1
     },
     {
       "Title": "Agent",
-      "Category": ["Kryminał", "Serial"],
-      "Sezons": "3"
+      "Category": ["Kryminał"],
+      "Format":"Serial",
+      "Sezons": 3
     },
     {
       "Title": "Friends",
-      "Category": ["Sitcom","Komedia", "Serial"],
-      "Sezons": "10"
+      "Category": ["Sitcom","Komedia"],
+      "Format":"Serial",
+      "Sezons": 10
     },
     {
       "Title": "Dr House",
       "Category": ["Dramat"],
-      "Sezons": "8"
+      "Format":"Serial",
+      "Sezons": 8
     }
     
   ]
