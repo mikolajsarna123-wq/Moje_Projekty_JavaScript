@@ -1,29 +1,47 @@
-body{
-    background-color: rgb(22, 21, 21)
+#wynik,label,select,button,h1,.opis{
+    color:white;
 }
-.contener1{
-     display: flex ;
-     justify-content: center
+body {
+    background-color: rgb(22, 21, 21);
+    margin: 0;
+    font-family: sans-serif;
 }
-select{
-    background-color: #141414; 
-    color: white;            
+
+.contener1 {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding: 20px;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+}
+
+label{
+    margin-left: 5vw;
+}
+
+select {
+    background-color: #141414;             
     border: 1px solid #444;
     padding: 5px 15px;
     border-radius: 4px;    
     cursor: pointer;
     outline: none;         
     transition: 0.3s;
-    
+    margin-left: 10px;
 }
-input{ cursor: pointer;}
 
-label{color:white;margin-left: 5vw;}
+input { cursor: pointer; }
+
 .contener2 {
     display: flex;
     flex-wrap: wrap;
     align-items: center;    
     text-align: center; 
+    justify-content: center;
 }
 
 .film {
@@ -31,9 +49,8 @@ label{color:white;margin-left: 5vw;}
     display: inline-block;
 }
 
-button{
+button {
   background: #0389b6;
-  color: white;
   border: none;
   padding: 10px 20px;
   font-weight: bold;
@@ -41,14 +58,16 @@ button{
   cursor: pointer;
   margin-left: 20px;
 }
-button:hover { background: #1eb4e6; transform: scale(1.05); transition: 0.2s; }
-button:active { background:#45c2ec; transform: scale(0.95); transition: 0.2s; }
 
-img{
+button:hover { background: #1eb4e6; transform: scale(1.05); transition: 0.2s; }
+button:active { background: #45c2ec; transform: scale(0.95); transition: 0.2s; }
+
+img {
     width: 180px;
-    height:100px;
+    height: 100px;
     margin: 20px;
 }
+
 img:hover {
     transform: scale(1.1);
     transition: 0.3s;
@@ -56,33 +75,35 @@ img:hover {
     filter: blur(1px);
     transition: filter 0.5s ease 1.5s;
 }
-img:active {transform: scale(0.95);transition: 0.2s}
 
-span{font-size:60px;}
-.F{color:rgb(108, 108, 231);}
+img:active { transform: scale(0.95); transition: 0.2s; }
 
-h1{
-    color:white;
+span { font-size: 60px; }
+.F { color: rgb(108, 108, 231); }
+
+h1 {
     margin-left: 5vw;
-    font-size:40px;
+    font-size: 40px;
     text-shadow: 10px 10px 70px rgb(43, 43, 181);
-    font-family: sans-serif;    
 }
 
-.opis{
+.opis {
     position: absolute;
     top: 0px;
     left: 0px;
     width: 198px;
-    height:111px;
+    height: 111px;
     margin-left: 11px;
     margin-top: 15px;
     background-color: rgba(47, 45, 45, 0.533);
-    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
     pointer-events: none;
-   
-   
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.film:hover .opis {
+    opacity: 1;
 }
