@@ -14,9 +14,13 @@ body {
     width: 450px; 
     padding: 25px;
 }
+.list{
+    max-height: 400px;
+    overflow: hidden;overflow-y: auto;}
 
 .input-group { 
     margin-bottom: 20px;
+    
 }
 
 input { 
@@ -54,10 +58,13 @@ input {
 }
 
 h2 { 
-    font-size: 1.1rem;
+    font-size: 15px;
     margin: 0;
     flex: 1;
     color: #333;
+    flex-wrap: wrap;
+    word-break: break-all;
+   
 }
 
 button { 
