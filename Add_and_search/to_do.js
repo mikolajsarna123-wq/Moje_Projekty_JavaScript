@@ -1,4 +1,4 @@
-const input = document.querySelector("#todo-input");
+const input = document.querySelector("#add-input");
 const inputSearch = document.querySelector("#search");
 const ul = document.querySelector("ul");
 
