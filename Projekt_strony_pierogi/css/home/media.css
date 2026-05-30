@@ -1,0 +1,38 @@
+/* @media print {
+  body {
+    background-color: white;
+    color: black;
+  }
+
+  header,
+  input,
+  div.logo,
+  aside {
+    visibility: hidden !important;
+  }
+
+  .container {
+    padding-left: 0;
+  }
+
+  main {
+    display: flex;
+    justify-content: center;
+  }
+
+  section {
+    background-color: transparent;
+    margin-bottom: 20px;
+  }
+
+  .box {
+    position: static;
+    transform: none;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100%;
+    box-shadow: none;
+    background-color: transparent;
+    page-break-before: always;
+  }
+} */

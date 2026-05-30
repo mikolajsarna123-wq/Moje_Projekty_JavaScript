@@ -3,51 +3,73 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/home.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap"
       rel="stylesheet"
     />
-
-    <title>Pierogarnia</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/css/home/home.css" />
+    <link rel="stylesheet" href="/css/home/header.css" />
+    <link rel="stylesheet" href="/css/home/aside.css" />
+    <link rel="stylesheet" href="/css/home/media.css" />
+    <link rel="stylesheet" href="/css/home/box.css" />
+    <title>Document</title>
   </head>
   <body>
-    <img src="/tło.jpg" alt="jpg" id="back-ground" />
-    <form id="loginForm" class="container">
-      <img src="/logo1.jpg" alt="jpg" />
-      <header>
-        <h1>Witaj na stronie Pierogarni</h1>
-      </header>
+    <header>
+      <h1>Pierogarnia</h1>
+      <input type="text" name="find" id="find" />
+      <div class="logo">P</div>
+    </header>
+
+    <div class="container">
+      <aside>
+        <h2>&#8680;</h2>
+        <label>Miesne<input type="checkbox" name="" id="" /></label>
+      </aside>
       <main>
-        <div class="login">
-          <input type="email" name="email" id="email" placeholder="Email" />
-          <input
-            type="password"
-            name="password"
-            id="password"
-            placeholder="Hasło"
-          />
-        </div>
-        <div class="buttons">
-          <button type="submit">zaloguj się</button>
-          <button type="button">zarejestruj się</button>
-        </div>
-        <div class="password">
-          <a href="">nie pamietam hasła?</a><br />
-          <label class="remember-me">
-            <input type="checkbox" name="remember" id="remember" />
-            Zapamiętaj mnie
-          </label>
-        </div>
+        <section>
+          <h2>Pierogi z łososiem</h2>
+          <img src="/public/pierogi-z-lososiem.webp" alt="img" />
+        </section>
       </main>
-      <footer>
-        <div class="social-icons">
-          <button type="button" class="btn-fb">f</button>
-          <button type="button" class="btn-google">G</button>
-        </div>
-      </footer>
-    </form>
+    </div>
+    <div class="box">
+      <img src="/public/pierogi-z-lososiem.webp" alt="img" />
+      <h2>
+        Współczesna gastronomia to coś znacznie więcej niż tylko zaspokajanie
+        głodu. To przede wszystkim budowanie doświadczeń, kreowanie wspomnień i
+        pobudzanie wszystkich zmysłów. Wizyta w restauracji czy nawet
+        przygotowywanie posiłku w domowym zaciszu z wykorzystaniem
+        rzemieślniczych produktów staje się momentem celebracji. Estetyka
+        podania, zapach unoszący się nad talerzem, tekstura ciasta i idealnie
+        skomponowane dodatki tworzą spójną całość, która potrafi przenieść nas
+        wspomnieniami do beztroskich lat dzieciństwa lub zainspirować do
+        poszukiwania nowych fuzji smakowych. Prowadzenie nowoczesnej przestrzeni
+        kulinarnej wymaga również dbałości o detale techniczne i wizualne – od
+        przytulnego wystroju wnętrza po intuicyjną stronę internetową, która
+        pozwala gościom na zapoznanie się z menu na ekranie smartfona. Każdy
+        element, włączając w to płynne animacje interfejsu, piękne fotografie
+        potraw oraz przejrzysty układ informacji, współpracuje ze sobą, aby
+        skrócić dystans między kuchnią a gościem. Gdy wszystkie te aspekty –
+        doskonały smak, pasja ludzi tworzących markę oraz dbałość o komfort
+        klienta – łączą się w jednym miejscu, powstaje przestrzeń wyjątkowa.
+        Przestrzeń, w której proste danie, jakim jest pieróg, urasta do rangi
+        prawdziwego dzieła sztuki użytkowej, zdolnego ńczyć pokolenia i
+        wywoływać szczery uśmiech na twarzach nawet najbardziej wymagających
+        krytyków kulinarnych.
+      </h2>
+      <button type="button" class="cancled">X</button>
+      <button type="button" class="liked">&#10084;</button>
+      <i class="fa-solid fa-cart-plus"></i>
+    </div>
+    <span class="basket"><i class="fa-solid fa-cart-shopping"></i></span>
+    <div class="backdrop"></div>
+    <script src="/js/home.js"></script>
   </body>
 </html>
