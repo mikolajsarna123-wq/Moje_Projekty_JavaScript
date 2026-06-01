@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/css/home/home.css" />
+    <link rel="stylesheet" href="/css/home/header.css" />
+    <link rel="stylesheet" href="/css/home/aside.css" />
+    <link rel="stylesheet" href="/css/home/box.css" />
+    <link rel="stylesheet" href="/css/home/media.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>Pierogarnia</h1>
+      <input type="text" name="find" id="find" />
+      <div class="logo">P</div>
+    </header>
+
+    <div class="container">
+      <aside>
+        <h2>&#8680;</h2>
+        <label
+          >Tradycyjne<input type="checkbox" name="traditional" id="traditional"
+        /></label>
+        <label>Mięsne<input type="checkbox" name="meat" id="meat" /></label>
+        <label
+          >Wege<input type="checkbox" name="vegetarian" id="vegetarian"
+        /></label>
+        <label
+          >Owocowe<input type="checkbox" name="fruity" id="fruity"
+        /></label>
+        <label
+          >Owocoe morza/Rybne<input type="checkbox" name="fish" id="fish"
+        /></label>
+      </aside>
+      <main></main>
+    </div>
+    <div class="box">
+      <img src="/public/pierogi-z-lososiem.webp" alt="img" />
+      <h2></h2>
+      <div class="buttons">
+        <button type="button" class="cancled">X</button>
+        <button type="button" class="liked">&#10084;</button>
+        <i class="fa-solid fa-cart-plus"></i>
+      </div>
+    </div>
+    <span class="basket"
+      ><i class="fa-solid fa-cart-shopping"></i>
+      <h2>1</h2></span
+    >
+    <div class="backdrop"></div>
+    <script type="module" src="/js/app.js"></script>
+    <script src="/js/show_photo.js"></script>
+  </body>
+</html>
