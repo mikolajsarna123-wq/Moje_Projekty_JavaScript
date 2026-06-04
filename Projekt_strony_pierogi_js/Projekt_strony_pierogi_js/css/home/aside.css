@@ -1,0 +1,56 @@
+aside {
+  position: fixed;
+  left: 0;
+  width: clamp(30px, 4vw, 50px);
+  height: 100vh;
+  background-color: aliceblue;
+  font-size: clamp(16px, 2vw, 30px);
+  transition: width 0.3s ease;
+  display: inline-block;
+}
+
+.container.active aside {
+  width: clamp(130px, 25vw, 320px);
+}
+
+aside h2 {
+  display: flex;
+  justify-self: end;
+  font-size: clamp(25px, 2vw, 30px);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.container.active aside h2 {
+  transform: rotate(180deg);
+}
+
+aside input {
+  width: clamp(16px, 1.8vw, 30px);
+  height: clamp(12px, 1.3vw, 20px);
+  position: absolute !important;
+  right: clamp(10px, 1.5vw, 20px) !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  margin: 0 !important;
+  cursor: pointer;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 60px;
+  padding: 0 clamp(40px, 4vw, 50px) 0 clamp(10px, 1.5vw, 20px);
+  width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+  visibility: hidden;
+  line-height: 1.2;
+  font-size: clamp(12px, 1.5vw, 22px);
+}
+
+label.active {
+  visibility: visible;
+  transition-delay: 0.2s;
+}

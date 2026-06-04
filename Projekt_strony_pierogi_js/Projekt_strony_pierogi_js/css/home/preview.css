@@ -1,0 +1,66 @@
+span.preview {
+  position: fixed;
+  bottom: clamp(120px, 14vw, 240px);
+  right: clamp(10px, 4vw, 50px);
+  width: clamp(190px, 20vw, 600px);
+  max-height: clamp(300px, 25vw, 600px);
+  background-color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  z-index: 210;
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding: 5px;
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: clamp(8px, 1.2vw, 15px);
+}
+
+span.preview.active {
+  display: flex;
+}
+span.preview > div,
+span.preview .preview-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: clamp(6px, 1vw, 12px);
+  width: 100%;
+}
+
+span.preview img {
+  width: clamp(20px, 5vw, 70px);
+  height: auto;
+  aspect-ratio: 1 / 1;
+  border-radius: 5%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+span.preview h2 {
+  margin: 0;
+  flex: 1;
+  font-size: clamp(8px, 0.8vw, 18px);
+  word-break: break-word;
+}
+
+span button {
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  font-size: clamp(4px, 1.5vw, 22px);
+
+  transition: transform 0.2s ease-in-out;
+}
+
+span button:active {
+  transform: scale(1.5);
+}
+
+span.preview .cena {
+  margin: 0;
+  white-space: nowrap;
+  font-size: clamp(8px, 0.8vw, 16px);
+}

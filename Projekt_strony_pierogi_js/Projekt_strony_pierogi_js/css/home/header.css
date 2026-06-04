@@ -1,0 +1,26 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(44, 43, 43);
+  top: 0;
+  position: sticky;
+  padding: clamp(10px, 1.5vw, 20px) clamp(15px, 2.5vw, 30px);
+  color: white;
+  z-index: 100;
+}
+
+header > * {
+  margin: auto;
+}
+
+h1 {
+  font-family: "Petit Formal Script", cursive;
+
+  font-size: clamp(20px, 3vw, 36px);
+}
+
+header input {
+  width: clamp(200px, 40vw, 500px);
+
+  font-size: clamp(20px, 1vw, 50px);
+}

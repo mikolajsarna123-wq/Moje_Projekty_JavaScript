@@ -1,0 +1,183 @@
+[
+  {
+    "id": 1,
+    "nazwa": "Pierogi z łososiem i bazyliowym masełkiem",
+    "cena": 29.5,
+    "przepis": [
+      "Farsz przygotowujemy ze świeżego fileta z łososia, którego najpierw dokładnie oczyszczamy ze skóry i ości, skrapiamy świeżo wyciśniętym sokiem z cytryny, oprószamy solą morską i delikatnie pieczemy w niskiej temperaturze z dodatkiem gałązek koperku.",
+      "Następnie upieczoną i wystudzoną rybę bardzo starannie rozdrabniamy na mniejsze kawałki, po czym delikatnie łączymy z kremowym serykiem ricotta, odrobiną kwaśnej śmietany, posiekanym koperkiem oraz świeżo mielonym pieprzem.",
+      "Mąkę pszenną przesiewamy na stolnicę, dodajemy szczyptę soli, łyżkę masła i stopniowo dolewamy ciepłą wodę. Ciasto gnieciemy cierpliwie i długo, aż pod dłońmi stanie się idealnie elastyczne, gładkie i aksamitnie miękkie.",
+      "Gotowe ciasto wałkujemy bardzo cienko, wycinamy za pomocą szklanki idealne kółka, na które nakładamy obfite porcje farszu. Formujemy zgrabne pierogi, dokładnie zlepiając brzegi, a następnie wrzucamy je na wrzącą, lekko osoloną wodę.",
+      "Pierogi gotujemy na minimalnym ogniu przez około trzy minuty od momentu, gdy swobodnie wypłyną na powierzchnię wody, po czym delikatnie wyciągamy je łyżką cedzakową, uważając aby nie uszkodzić delikatnego ciasta.",
+      "W międzyczasie na małej patelni powoli rozpuszczamy dobrej jakości masło, dodając do niego dużą ilość świeżej, drobno zblendowanej bazylii, ząbek czosnku przeciśnięty przez praskę oraz kilka kropel soku z limonki dla przełamania smaku.",
+      "Ugotowane, gorące pierogi układamy elegancko na podgrzanym talerzu i obficie polewamy przygotowanym wcześniej aromatycznym masełkiem bazyliowym bezpośrednio przed podaniem ich na stół, dekorując całość listkami świeżych ziół."
+    ],
+    "url": "/public/pierogi-z-lososiem.webp",
+    "kategoria": ["rybne"]
+  },
+  {
+    "id": 2,
+    "nazwa": "Pierogi z kapustą i grzybami",
+    "cena": 23.0,
+    "przepis": [
+      "Najlepszą kiszoną kapustę dokładnie płuczemy, szatkujemy i gotujemy do miękkości z liściem laurowym.",
+      "Suszone grzyby leśne moczymy przez całą noc, a następnie gotujemy i drobno siekamy wraz z cebulką podsmażoną na złoty kolor.",
+      "Wszystkie składniki farszu dokładnie mieszamy na patelni, mocno doprawiając świeżo mielonym pieprzem oraz solą.",
+      "Tradycyjne ciasto przygotowujemy wyłącznie z mąki, gorącej wody i odrobiny oleju dla elastyczności.",
+      "Pierogi lepimy ręcznie, dbając o precyzyjne i ozdobne wykończenie brzegów w tak zwaną falbankę.",
+      "Podajemy je tradycyjnie okraszone chrupiącą cebulką zrumienioną na oleju rzepakowym."
+    ],
+    "url": "/public/wigilijne-pierogi-z-kapusta-i-grzybami0-4.webp",
+    "kategoria": ["Tradycyjne", "Wege"]
+  },
+  {
+    "id": 3,
+    "nazwa": "Pierogi z kaszanką okraszone cebulą i kawałkami dyni",
+    "cena": 24.5,
+    "przepis": [
+      "Wytrawny farsz powstaje ze sprawdzona, wiejskiej kaszanki, którą obieramy ze flaka i rozgniatamy na patelni.",
+      "Cebulę kroimy w kostkę i szklimy na smalcu, po czym dodajemy kaszankę i doprawiamy majerankiem oraz pieprzem.",
+      "Dynię kroimy w drobną kostkę i pieczemy w piekarniku z odrobiną miodu oraz ostrej papryki dla kontrastu smaków.",
+      "Ciasto wałkujemy bardzo cienko, nakładamy przestudzony farsz i mocno zlepiamy brzegi, aby nadzienie nie wypłynęło.",
+      "Pierogi wrzucamy na wrzącą wodę i gotujemy na małym oknie przez około cztery minuty.",
+      "Talerz dekorujemy kawałkami pieczonej dyni i całość obficie okraszamy chrupiącymi skwarkami."
+    ],
+    "url": "/public/pierogi-z-kaszanka-okraszone-cebula-i-kawalkami-dyni.webp",
+    "kategoria": ["Mięsne"]
+  },
+  {
+    "id": 4,
+    "nazwa": "Pierogi Ruskie",
+    "cena": 21.0,
+    "przepis": [
+      "Ziemniaki gotujemy w osolonej wodzie, a następnie jeszcze gorące dokładnie ugniatamy na gładką masę bez grudek.",
+      "Twaróg półtłusty mielimy lub rozgniatamy widelcem i łączymy z ostudzonymi ziemniakami w proporcji pół na pół.",
+      "Cebulę kroimy w bardzo drobną kosteczkę i podsmażamy na maśle, aż uzyska piękny, głęboki złoty kolor.",
+      "Farsz doprawiamy bardzo dużą ilością czarnego pieprzu, co nadaje pierogom charakterystycznego, wyrazistego smaku.",
+      "Elastyczne ciasto pierogowe wycinamy szklanką, nakładamy obfite porcje nadzienia i dokładnie formujemy kunsztowne brzegi.",
+      "Serwujemy gorące z dodatkiem gęstej, kwaśnej śmietany i dodatkową porcją zrumienionej cebuli."
+    ],
+    "url": "/public/pierogi-ruskie233-4.webp",
+    "kategoria": ["Tradycyjne", "Wege"]
+  },
+  {
+    "id": 5,
+    "nazwa": "Pierogi z truskawkami",
+    "cena": 22.0,
+    "przepis": [
+      "Świeże i dojrzałe truskawki dokładnie myjemy, odszypułkowujemy, a większe sztuki kroimy na mniejsze kawałki.",
+      "Owoce delikatnie oprószamy mąką ziemniaczaną, co zapobiega nadmiernemu wyciekaniu soku podczas procesu gotowania.",
+      "Do ciasta dodajemy odrobinę roztopionego masła, dzięki czemu staje się ono niezwykle miękkie i delikatne.",
+      "Do środka każdego krążka wkładamy truskawkę wraz z małą szczyptą cukru trzcinowego dla osłody.",
+      "Pierogi wrzucamy na mocno wrzącą wodę i gotujemy bardzo krótko, uważając żeby nie rozgotować owoców.",
+      "Serwujemy polane słodką śmietanką, posypane cukrem waniliowym i udekorowane listkami świeżej mięty."
+    ],
+    "url": "/public/pierogi-z-truskawkami-i-cytrynowo-mietowa-nuta0-4.webp",
+    "kategoria": ["Owocowe"]
+  },
+  {
+    "id": 6,
+    "nazwa": "Pierogi z z farszem drobiowo-brokułowym",
+    "cena": 25.5,
+    "przepis": [
+      "Pierś z kurczaka gotujemy w aromatycznym bulionie warzywnym z dodatkiem lubczyku, a następnie drobno siekamy.",
+      "Brokuły dzielimy na małe różyczki, blanszujemy we wrzątku przez trzy minuty i hartujemy w lodowatej wodzie.",
+      "Składniki łączymy, dodając starty ser mozzarella oraz ząbek czosnku przeciśnięty przez specjalną praskę.",
+      "Farsz wiążemy odrobiną gęstego, kremowego sosu beszamelowego, co nadaje mu aksamitnej i spójnej konsystencji.",
+      "Delikatne ciasto wałkujemy na stolnicy, wycinamy równe kółka i precyzyjnie zamykamy w nich przygotowane nadzienie.",
+      "Gotowe pierogi podajemy polane masłem klarowanym i posypane prażonymi płatkami migdałów."
+    ],
+    "url": "/public/pierogi-z-farszem-drobiowo-brokulowym0-4.webp",
+    "kategoria": ["Mięsne"]
+  },
+  {
+    "id": 7,
+    "nazwa": "Pierogi z dynią i szałwią",
+    "cena": 23.5,
+    "przepis": [
+      "Dojrzałą dynię hokkaido kroimy, oczyszczamy z nasion i pieczemy w piekarniku do momentu, aż całkowicie zmięknie.",
+      "Upieczony miąższ blendujemy na gładkie puree i odciskamy z nadmiaru wody za pomocą gazy lub sitka.",
+      "Masę dyniową łączymy z włoskim serem ricotta, tartym parmezanem oraz świeżo startą gałką muszkatołową.",
+      "Ciasto zagniatamy z dodatkiem ciepłej wody, wałkujemy i wycinamy kwadraty lub klasyczne, okrągłe kształty.",
+      "Pierogi gotujemy partiami w dużym garnku, dbając o to, aby swobodnie pływały i nie sklejały się.",
+      "Podajemy na płaskim talerzu, polane masłem szałwiowym ze skwierczącymi, chrupiącymi listkami świeżej szałwii."
+    ],
+    "url": "/public/pierogi-z-dynia-ricotta-i-szalwia0-4.webp",
+    "kategoria": ["Wege"]
+  },
+  {
+    "id": 8,
+    "nazwa": "Pierogi z musem jabułkowo-bananowym",
+    "cena": 21.5,
+    "przepis": [
+      "Słodkie jabłka obieramy ze skórki, gniazda nasienne wycinamy, a miąższ kroimy w kostkę i dusimy.",
+      "Do miękkich jabłek dodajemy dojrzałe banany i całość blendujemy na puszysty, gładki mus owocowy.",
+      "Nadzienie doprawiamy solidną szczyptą mielonego cynamonu oraz kilkoma kroplami świeżo wyciśniętego soku z cytryny.",
+      "Specjalne, elastyczne ciasto przygotowujemy z mąki pszennej i ciepłego mleka, co nadaje mu wyjątkowej maślanej miękkości.",
+      "Pierogi nadziewamy obficie, mocno dociskając brzegi widelcem, tworząc estetyczny i szczelny wzorek dookoła.",
+      "Podajemy na ciepło, oprószone cukrem pudrem lub polane aksamitnym sosem waniliowym."
+    ],
+    "url": "/public/pierogi-z-musem-jablkowobananowym0-4.webp",
+    "kategoria": ["Owocowe"]
+  },
+  {
+    "id": 9,
+    "nazwa": "Pierogi z czerwoną fasolą i ziemniakami",
+    "cena": 22.5,
+    "przepis": [
+      "Czerwoną fasolę z puszki dokładnie odsączamy z zalewy, płuczemy pod bieżącą wodą i dokładnie blendujemy.",
+      "Ugotowane wcześniej ziemniaki tłuczemy na gładkie puree i łączymy z przygotowaną wcześniej masą z fasoli.",
+      "Do farszu dodajemy cebulę oraz czerwoną paprykę pokrojoną w kosteczkę i podsmażoną na oliwie z oliwek.",
+      "Całość doprawiamy w stylu meksykańskim, używając kuminu, kolendry, słodkiej papryki oraz odrobiny ostrego chili.",
+      "Wyrobione ciasto wałkujemy cienko, wycinamy kółka, nakładamy pikantny farsz i precyzyjnie zlepiamy brzegi.",
+      "Pierogi serwujemy z dodatkiem gęstego, domowego sosu pomidorowego lub posypane świeżą kolendrą."
+    ],
+    "url": "/public/pierogi-z-czerwona-fasolka-i-ziemniakami0-4.webp",
+    "kategoria": ["Wege"]
+  },
+  {
+    "id": 10,
+    "nazwa": "Pierogi z łososiem i szafranem",
+    "cena": 29.9,
+    "przepis": [
+      "Nitki drogocennego szafranu zalewamy dwiema łyżkami wrzątku, aby uwolnić ich niepowtarzalny aromat oraz barwę.",
+      "Świeży filet z łososia parujemy na parze, po czym delikatnie dzielimy palcami na mniejsze cząstki.",
+      "Rybę łączymy z serkiem mascarpone, dodając napar szafranowy, odrobinę skórki z cytryny oraz biały pieprz.",
+      "Ciasto przygotowujemy klasycznie, wałkujemy bardzo cienko i wycinamy z niego eleganckie, równe krążki.",
+      "Nadzienie nakładamy delikatnie, starannie formując brzegi, aby pierogi prezentowały się idealnie na talerzu.",
+      "Gotujemy krótko i podajemy w towarzystwie delikatnego, kremowego sosu na bazie śmietanki trzydziestoprocentowej."
+    ],
+    "url": "/public/pierogi-z-lososiem-i-szafranem0-4.webp",
+    "kategoria": ["rybne"]
+  },
+  {
+    "id": 11,
+    "nazwa": "Pierogi z mięsem mielonym",
+    "cena": 26.0,
+    "przepis": [
+      "Łopatkę wieprzową oraz pręgę wołową gotujemy w esencjonalnym rosole z warzywami korzeniowymi i przyprawami.",
+      "Ugotowane, miękkie mięso studzimy, oddzielamy od kości i mielimy w maszynce na średnich oczkach.",
+      "Do zmielonego mięsa dodajemy podsmażoną na maśle cebulkę oraz odrobinę pozostałego z gotowania bulionu dla soczystości.",
+      "Farsz wyrabiamy dłońmi, doprawiając solą, pieprzem, majerankiem oraz odrobiną tartej gałki muszkatołowej.",
+      "Tradycyjne ciasto wałkujemy i wycinamy spore krążki, w które nakładamy solidne porcje mięsnego nadzienia.",
+      "Pierogi gotujemy pięć minut od wypłynięcia i podajemy ze złocistymi, chrupiącymi skwarkami z boczku."
+    ],
+    "url": "/public/pierogi-z-miesem-mielonym16-4.webp",
+    "kategoria": ["Mięsne", "Tradycyjne"]
+  },
+  {
+    "id": 12,
+    "nazwa": "Pierogi z kaszą gryczaną",
+    "cena": 22.0,
+    "przepis": [
+      "Kaszę gryczaną paloną gotujemy na sypko w osolonej wodzie i odstawiamy do całkowitego ostygnięcia.",
+      "Twaróg tłusty rozgniatamy i mieszamy z kaszą, zachowując proporcje gwarantujące wyrazisty, tradycyjny smak.",
+      "Na patelni rozgrzewamy masło, szklimy na nim dużą ilość cebuli i dodajemy do przygotowanej masy.",
+      "Całość bardzo mocno doprawiamy świeżo mielonym pieprzem, który jest kluczowy dla tego rodzaju farszu.",
+      "Elastyczne, miękkie ciasto rozwałkowujemy, wycinamy zgrabne kółka i sprawnie lepimy klasyczne pierogi.",
+      "Ugotowane pierogi serwujemy okraszone masłem lub z dodatkiem boczku podsmażonego z cebulką."
+    ],
+    "url": "/public/pierogi-z-kasza-gryczana24-4.webp",
+    "kategoria": ["Wege"]
+  }
+]
